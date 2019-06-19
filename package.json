@@ -1,0 +1,14 @@
+{
+  "name": "nuggets",
+  "version": "1.0.0",
+  "description": "",
+  "main": "nuggets.js",
+  "scripts": {
+    "test": "node nuggets.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.88.0"
+  }
+}
