@@ -5,7 +5,7 @@ const url = require('url');
 
 /*
   @options - options to set the url to, eg. hostname, port
-*/
+ */
 let buildUrl = (options) => {
   return url.parse(url.format({
     protocol: options.port == 443 ? 'https' : 'http',
@@ -21,7 +21,7 @@ let buildUrl = (options) => {
   @url      - url returned from above 'buildUrl' function
   @onResult - callback function to handle the content returned from request
   @method   - http request method, eg. 'GET', 'POST'
-*/
+ */
 let request = (url, onResult, method='GET') => {
   const port = url.port === '443' ? https : http;
 
@@ -40,7 +40,6 @@ let request = (url, onResult, method='GET') => {
 
     res.on('end', () => {
       onResult(res.statusCode, content);
-      console.log(url);
     });
   });
 
@@ -53,11 +52,11 @@ let request = (url, onResult, method='GET') => {
 
 
 /*
-  backend           - https://yts.lt/api/v2/list_movies.json
-  @ytsResStatusCode - status code returned from yts web API from above backend
-  @ytsResContent    - the content returned from yts web API from above backend
-*/
-let listMovies = (ytsResStatusCode, ytsResContent) => {
+ * backend           - https://yts.lt/api/v2/list_movies.json
+ * @ytsResStatusCode - status code returned from yts web API from above backend
+ * @ytsResContent    - the content returned from yts web API from above backend
+ */
+let listMoviesCB = (ytsResStatusCode, ytsResContent) => {
   if (ytsResStatusCode == 200) {
     let jsonRes = JSON.parse(ytsResContent);
     let movies = jsonRes.data;
@@ -67,24 +66,40 @@ let listMovies = (ytsResStatusCode, ytsResContent) => {
   }
 }
 
-
-let main = () => {
-  let LIST_MOVIES_BACKEND = '/api/v2/list_movies.json';
-  let options = {
+/*
+ * all the parameters to this function are documented in the following link
+ * in the 'List Movies' section
+ * https://yts.lt/api
+ */
+1
+let listMovies = ({limit, page, quality, minumum_rating, query_term,
+                   genre, sort_by, order_by, with_rt_ratings}={}) => {
+  const LIST_MOVIES_BACKEND = '/api/v2/list_movies.json';
+  const options = {
     host: 'yts.lt',
     path: LIST_MOVIES_BACKEND,
     method: 'GET',
+    port: 443,
     query: {
-      limit: 50
-    },
-    port: 443
+      limit:           limit,
+      page:            page,
+      quality:         quality,
+      query_term:      query_term,
+      genre:           genre,
+      sort_by:         sort_by,
+      order_by:        order_by,
+      minimum_rating:  limit,
+      with_rt_ratings: with_rt_ratings,
+    }
   };
   let url = buildUrl(options);
-  request(url, listMovies);
-  /*
-    let jsonResponse = JSON.parse(response);
-    console.log(JSON.stringify(jsonResponse, null, 2));
-  */
+
+  request(url, listMoviesCB);
+}
+
+
+let main = () => {
+  listMovies({sort_by: 'like_count', genre: 'romance', limit: 50, page: 0});
 }
 
 main();
