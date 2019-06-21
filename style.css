@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    border: 0px;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: DarkSlateGray;
+    font: caption;
+}
+
+div.movie {
+    margin: 5px;
+    border: 1px solid black;
+    float: left;
+}
+
+div.movie:hover {
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+div.movie img {
+    height: 186px;
+    width: 140px;
+    background-size: cover;
+}
+
+div.title {
+    max-width: 140px;
+    font-size: 15px;
+    font-style: italic;
+    margin: 2px;
+    text-overflow: ellipsis;
+    overflow: hidden; 
+    white-space: nowrap;
+}
