@@ -100,10 +100,6 @@ let listMovies = (onResult=listMoviesCB,
   request(url, onResult)
 }
 
-/*
-let main = () => {
-  listMovies({sort_by: 'like_count', genre: 'romance', limit: 50, page: 0})
+module.exports = {
+  listMovies,
 }
-
-main()
-*/
