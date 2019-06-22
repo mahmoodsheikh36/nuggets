@@ -1,0 +1,139 @@
+{
+    "status": "ok",
+    "status_message": "Query was successful",
+    "data": {
+        "movie": {
+            "id": 7025,
+            "url": "https://yts.lt/movie/thor-ragnarok-2017",
+            "imdb_code": "tt3501632",
+            "title": "Thor: Ragnarok",
+            "title_english": "Thor: Ragnarok",
+            "title_long": "Thor: Ragnarok (2017)",
+            "slug": "thor-ragnarok-2017",
+            "year": 2017,
+            "rating": 7.9,
+            "runtime": 130,
+            "genres": [
+                "Action",
+                "Adventure",
+                "Comedy",
+                "Fantasy",
+                "Sci-Fi"
+            ],
+            "download_count": 5747506,
+            "like_count": 1325,
+            "description_intro": "Thor (Chris Hemsworth) is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnar\u00f6k, the destruction of his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela (Cate Blanchett).",
+            "description_full": "Thor (Chris Hemsworth) is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnar\u00f6k, the destruction of his homeworld and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela (Cate Blanchett).",
+            "yt_trailer_code": "ue80QwXMRHg",
+            "language": "English",
+            "mpa_rating": "PG-13",
+            "background_image": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/background.jpg",
+            "background_image_original": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/background.jpg",
+            "small_cover_image": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/small-cover.jpg",
+            "medium_cover_image": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/medium-cover.jpg",
+            "large_cover_image": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/large-cover.jpg",
+            "medium_screenshot_image1": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/medium-screenshot1.jpg",
+            "medium_screenshot_image2": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/medium-screenshot2.jpg",
+            "medium_screenshot_image3": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/medium-screenshot3.jpg",
+            "large_screenshot_image1": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/large-screenshot1.jpg",
+            "large_screenshot_image2": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/large-screenshot2.jpg",
+            "large_screenshot_image3": "https://yts.lt/assets/images/movies/thor_ragnarok_2017/large-screenshot3.jpg",
+            "cast": [
+                {
+                    "name": "Chris Hemsworth",
+                    "character_name": "Thor",
+                    "url_small_image": "https://yts.lt/assets/images/actors/thumb/nm1165110.jpg",
+                    "imdb_code": "1165110"
+                },
+                {
+                    "name": "Tessa Thompson",
+                    "character_name": "Valkyrie",
+                    "url_small_image": "https://yts.lt/assets/images/actors/thumb/nm1935086.jpg",
+                    "imdb_code": "1935086"
+                },
+                {
+                    "name": "Benedict Cumberbatch",
+                    "character_name": "Doctor Strange",
+                    "url_small_image": "https://yts.lt/assets/images/actors/thumb/nm1212722.jpg",
+                    "imdb_code": "1212722"
+                },
+                {
+                    "name": "Cate Blanchett",
+                    "character_name": "Hela",
+                    "url_small_image": "https://yts.lt/assets/images/actors/thumb/nm0000949.jpg",
+                    "imdb_code": "0000949"
+                }
+            ],
+            "torrents": [
+                {
+                    "url": "https://yts.lt/torrent/download/F8717C4FD5234098ABE769DD45917F2945E4CB20",
+                    "hash": "F8717C4FD5234098ABE769DD45917F2945E4CB20",
+                    "quality": "3D",
+                    "type": "bluray",
+                    "seeds": 34,
+                    "peers": 8,
+                    "size": "2.19 GB",
+                    "size_bytes": 2351494595,
+                    "date_uploaded": "2018-02-28 19:14:29",
+                    "date_uploaded_unix": 1519841669
+                },
+                {
+                    "url": "https://yts.lt/torrent/download/06E3B0F724915F8D2FAC8A4C23C8C5E6AECDD107",
+                    "hash": "06E3B0F724915F8D2FAC8A4C23C8C5E6AECDD107",
+                    "quality": "720p",
+                    "type": "bluray",
+                    "seeds": 622,
+                    "peers": 56,
+                    "size": "1.04 GB",
+                    "size_bytes": 1116691497,
+                    "date_uploaded": "2018-02-17 16:02:31",
+                    "date_uploaded_unix": 1518879751
+                },
+                {
+                    "url": "https://yts.lt/torrent/download/E9D130CE07D0F1997CB4AE6F9EFF2A8CC07D0E97",
+                    "hash": "E9D130CE07D0F1997CB4AE6F9EFF2A8CC07D0E97",
+                    "quality": "1080p",
+                    "type": "bluray",
+                    "seeds": 857,
+                    "peers": 39,
+                    "size": "1.96 GB",
+                    "size_bytes": 2104533975,
+                    "date_uploaded": "2018-02-17 18:07:25",
+                    "date_uploaded_unix": 1518887245
+                },
+                {
+                    "url": "https://yts.lt/torrent/download/22E5CD13732B5F6A3B3732A7603B002EF9BA61F3",
+                    "hash": "22E5CD13732B5F6A3B3732A7603B002EF9BA61F3",
+                    "quality": "720p",
+                    "type": "web",
+                    "seeds": 345,
+                    "peers": 39,
+                    "size": "954.46 MB",
+                    "size_bytes": 1000823849,
+                    "date_uploaded": "2018-01-23 18:04:03",
+                    "date_uploaded_unix": 1516727043
+                },
+                {
+                    "url": "https://yts.lt/torrent/download/2037B2296417B5D6D3B89DC7A288255943406CF7",
+                    "hash": "2037B2296417B5D6D3B89DC7A288255943406CF7",
+                    "quality": "1080p",
+                    "type": "web",
+                    "seeds": 764,
+                    "peers": 38,
+                    "size": "1.98 GB",
+                    "size_bytes": 2126008812,
+                    "date_uploaded": "2018-01-23 20:19:37",
+                    "date_uploaded_unix": 1516735177
+                }
+            ],
+            "date_uploaded": "2018-01-23 18:04:03",
+            "date_uploaded_unix": 1516727043
+        }
+    },
+    "@meta": {
+        "server_time": 1561225061,
+        "server_timezone": "CET",
+        "api_version": 2,
+        "execution_time": "0 ms"
+    }
+}
