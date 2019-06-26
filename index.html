@@ -6,8 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+
     <div id="movies">
     </div>
+
+    <div class="preview_container" id="preview_container">
+      <div class="preview_image_container" id="preview_img_container">
+        <img id="preview_image" class="preview_image">
+      </div>
+      <div class="preview_info_container" id="preview_info_container">
+        <p class="preview_title" id="preview_title">movie title</p>
+        <p class="preview_year" id="preview_year">2019</p>
+        <p class="preview_desc" id="preview_desc">movie description - this is a great movie that is irresistable</p>
+        <button class="watch_button" id="watch_button">Watch</button>
+      </div>
+      <div class="close_button" onclick='showMovies()'>X</div>
+    </div>
+
+    <div class="video_container" id="video_container">
+    </div>
+
   </body>
   <script type='text/javascript' src='index.js'></script>
 </html>

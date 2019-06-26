@@ -1,20 +1,17 @@
 * {
     box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
     padding: 0px;
-    border: 0px;
+    margin: 0px;
 }
 
 body {
-    padding: 0px;
-    margin: 0px;
-    background-color: DarkSlateGray;
+    background-color: #1d4738;
     font: caption;
-}
-
-div.movie {
-    margin: 5px;
-    border: 1px solid black;
-    float: left;
 }
 
 div.movie:hover {
@@ -23,17 +20,115 @@ div.movie:hover {
 }
 
 div.movie img {
-    height: 186px;
+    height: auto;
     width: 140px;
-    background-size: cover;
 }
 
 div.title {
+    margin-bottom: 2px;
+    margin-left: 2px;
     max-width: 130px;
-    font-size: 15px;
-    font-style: italic;
-    margin: 2px;
+    font-size: 13px;
+    font-weight: bold;
     text-overflow: ellipsis;
     overflow: hidden; 
     white-space: nowrap;
+}
+
+div.movie {
+    margin: 5px;
+    border: 1px solid black;
+    float: left;
+}
+
+.preview_container {
+    display: none;
+    flex-flow: row wrap;
+    justify-content: center;
+    height: 100%;
+}
+
+/*
+.preview_item {
+    margin: 10px;
+    background-color: blueviolet;
+    border: 1px solid red;
+    flex: 0 1 45%;
+    align-self: stretch;
+}
+*/
+
+.preview_image_container {
+    margin: 10px;
+    flex: 0 1 32%;
+    align-self: center;
+    height: 90%;
+}
+
+.preview_image_container img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.preview_info_container {
+    margin: 10px;
+    flex: 0 1 50%;
+    align-self: center;
+    height: 90%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+.preview_title {
+    font-weight: bold;
+    font-style: italic;
+    align-self: center;
+    font-size: 30px;
+    height: 1%;
+}
+
+.preview_year {
+    font-weight: bold;
+    align-self: flex-start;
+    font-size: 20px;
+    height: 1%;
+}
+
+.preview_desc {
+    align-self: flex-start;
+}
+
+.close_button {
+    font-size: 2em;
+    cursor: pointer;
+    align-self: flex-start;
+    margin: 10px;
+}
+.close_button:hover {
+    color: darkred;
+}
+
+.watch_button {
+    background-color: black;
+    color: darkgrey;
+    border: 0px;
+    align-self: flex-start;
+    flex: 0 0 5%;
+}
+.watch_button:hover {
+    background-color: #300010;
+}
+
+.video_container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.video_container video {
+    height: 100%;
+    width: 100%;
+    align-self: stretch;
 }

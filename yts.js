@@ -56,7 +56,7 @@ let request = (url, onResult, method='GET') => {
  * @ytsResStatusCode - status code returned from yts web API from above backend
  * @ytsResContent    - the content returned from yts web API from above backend
  */
-let listMoviesCB = (ytsResContent, ytsResStatusCode) => {
+let fetchMoviesCB = (ytsResContent, ytsResStatusCode) => {
   if (ytsResStatusCode == 200) {
     let jsonRes = JSON.parse(ytsResContent)
     let movies = jsonRes.data
@@ -66,14 +66,15 @@ let listMoviesCB = (ytsResContent, ytsResStatusCode) => {
   }
 }
 
+
 /*
  * all the fields in the second argument to this function are
  * documented in the following link in the 'List Movies' section
  * https://yts.lt/api
  * @onResult - the callback function to handle the returned json,
- *             it defaults to 'listMoviesCB' which prints the output
+ *             it defaults to 'fetchMoviesCB' which prints the output
  */
-let listMovies = (onResult=listMoviesCB,
+let fetchMovies = (onResult=fetchMoviesCB,
                   {limit, page, quality, minumum_rating,
                    query_term, genre, sort_by,
                    order_by, with_rt_ratings}={}) => {
@@ -81,7 +82,6 @@ let listMovies = (onResult=listMoviesCB,
   const options = {
     host: 'yts.lt',
     path: LIST_MOVIES_BACKEND,
-    method: 'GET',
     port: 443,
     query: {
       limit:           limit,
@@ -100,6 +100,35 @@ let listMovies = (onResult=listMoviesCB,
   request(url, onResult)
 }
 
-module.exports = {
-  listMovies,
+
+/*
+ * get information about a movie
+ * @onResult - callback function to handle response
+ * the other arguments are documented here https://yts.lt/api
+ */
+let fetchMovieDetails = (onResult, {movie_id, with_images, with_cast}={}) => {
+  const MOVIE_DETAILS_BACKEND = '/api/v2/movie_details.json'
+  const options = {
+    host: 'yts.lt',
+    path: MOVIE_DETAILS_BACKEND,
+    port: 443,
+    query: {
+      movie_id:    movie_id,
+      with_images: with_images,
+      with_cast:   with_cast
+    }
+  }
+  let url = buildUrl(options)
+
+  request(url, onResult)
 }
+
+module.exports = {
+  fetchMovies,
+  fetchMovieDetails,
+}
+/*
+fetchMovieDetails((content, statusCode) => {
+  console.log(content)
+}, {movie_id: 7025, with_images: true, with_cast: true})
+*/
