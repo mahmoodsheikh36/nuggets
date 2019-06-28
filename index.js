@@ -1,18 +1,22 @@
 const fs = require('fs'),
-      readline = require('readline')
+      readline = require('readline'),
+      os = require('os')
 const yts = require('./yts.js'),
       torrent = require('./torrent.js')
 
 let movies = []
 let scrollAmount
 let currentMovie
+let moviePageIndex = 0
 
 let $ = (query) => {
   return document.querySelector(query)
 }
 
-let hide = (domElement) => {
-  domElement.style.display = 'none';
+let hide = (...domElements) => {
+  domElements.forEach((domElement) => {
+    domElement.style.display = 'none';
+  })
 }
 let show = (domElement) => {
   domElement.style.display = 'block';
@@ -43,15 +47,6 @@ let addMovies = (movies) => {
   }
 }
 
-let previewMovie = (movie) => {
-    hide($('#movies'))
-    $('#preview_title').innerHTML = movie.title
-    $('#preview_year').innerHTML  = movie.year
-    $('#preview_desc').innerHTML  = movie.description_full
-    $('#preview_image').src       = movie.large_cover_image
-    showFlexDisplay($('#preview_container'))
-}
-
 let showMovies = () => {
   hide($('#preview_container'))
   show($('#movies'))
@@ -62,13 +57,11 @@ let addMovie = (movie) => {
   movies.push(movie)
   // main div
   let movieDiv = document.createElement('div')
-  movie.domElement = movieDiv
+  // movie.domElement = movieDiv
   movieDiv.className = 'movie'
-  // movieDiv.setAttribute('data-movieId', movie.id)
   movieDiv.onclick = () => {
     scrollAmount = document.documentElement.scrollTop
     previewMovie(movie)
-    currentMovie = movie
   }
 
   // image
@@ -86,19 +79,89 @@ let addMovie = (movie) => {
   moviesDiv.appendChild(movieDiv)
 }
 
-$('#watch_button').onclick = () => {
-  console.log('watch_button clicked')
-  hide($('#preview_container'));
-  torrent.stream(currentMovie, '#video_container')
+let watchMovie = (movie) => {
+  torrent.stream(movie, (movieTorrentId) => {
+    hide($('#movies'), $('#preview_container'))
+    console.log(movieTorrentId)
+    torrent.append(movieTorrentId, '#video_container')
+  })
 }
+
+let previewMovie = (movie) => {
+  hide($('#movies'))
+  $('#preview_title').innerHTML = movie.title
+  $('#preview_year').innerHTML  = movie.year
+  $('#preview_desc').innerHTML  = movie.description_full
+  $('#preview_image').src       = movie.large_cover_image
+  showFlexDisplay($('#preview_container'))
+  currentMovie = movie
+}
+
+let viewMovieList = () => {
+  let movieVideo = getMovieVideoElement()
+  if (movieVideo !== null)
+    $('#movie_video').pause()
+  hide($('#video_container'))
+  hide($('#preview_container'))
+  show($('#movies'))
+}
+
+let getMovieVideoElement = () => {
+  return $('#video_container').firstElementChild
+}
+
+/* shortcuts */
+// window.addEventListener('keyup', function () { console.log(arguments) }, true)
 
 window.onload = () => {
   hide($('#preview_container'));
-  getMostDownloadedMovies(50, 10)
+  getMostDownloadedMovies(50, 1)
+  moviePageIndex++
+}
+
+let nextMostDownloadedMoviePages = () => {
+  getMostDownloadedMovies(50, 1, moviePageIndex)
+  moviePageIndex++
 }
 
 let increaseWatchTime = (movie, cb) => {
-  cb()
+  let homeDir = os.homedir()
+  let dataFile = homeDir + '/mydata/movie_data.json'
+  fs.readFile(dataFile, (err, content) => {
+    if (err) throw err
+    let movies = JSON.parse(content)
+    let foundMovie = false
+    movies.forEach((savedMovie) => {
+      if (savedMovie.id === movie.id) {
+        foundMovie = true
+        savedMovie.sec_watched++;
+      }
+    })
+
+    let simpleMovieData = {}
+    if (!foundMovie) {
+      simpleMovieData.id            = movie.id
+      simpleMovieData.title         = movie.title
+      simpleMovieData.title_english = movie.title_english
+      simpleMovieData.year          = movie.year
+      simpleMovieData.genres        = movie.genres
+      simpleMovieData.runtime       = movie.runtime
+      simpleMovieData.sec_watched   = 1
+      /*
+      movieData.cast          = []
+      movie.cast.forEach((actor) => {
+        movieData.push(actor.name)
+      })
+      */
+      movies.push(simpleMovieData)
+    }
+    
+    fs.writeFile(dataFile, JSON.stringify(movies, null, 2), (err) => {
+      if (err) throw err
+      cb()
+    })
+
+  })
 }
 
 /* movie data logging */
@@ -118,3 +181,12 @@ let collectData = () => {
 }
 
 collectData()
+
+/* button clicking events */
+$('#watch_button').onclick = () => {
+  watchMovie(currentMovie)
+}
+
+$('#close_button').onclick = () => {
+  viewMovieList()
+}
