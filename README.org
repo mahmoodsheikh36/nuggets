@@ -1,0 +1,24 @@
+* screenshots
+#+CAPTION: screenshot with most downloaded movies from YTS api
+#+NAME:    screenshot1
+[[./screenshots/screenshot1.png]]
+
+#+CAPTION: screenshot with console open
+#+NAME:    screenshot2
+[[./screenshots/screenshot2.png]]
+
+* explanation
+this is a program written using electronjs and WebTorrent and uses YTS web API
+to make movie torrent streaming easier than it has ever been
+
+* credits
+inspired by PopcornTime, written by me
+
+* how to run
+#+BEGIN_SRC bash
+git clone https://github.com/mahmoodsheikh36/nuggets.git
+cd nuggets
+npm install
+npm start
+#+END_SRC
+it is as simple as that!
