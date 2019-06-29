@@ -1,4 +1,5 @@
 const WebTorrent = require('webtorrent')
+const os = require('os')
  
 let torrentClient = new WebTorrent()
  
@@ -19,7 +20,8 @@ let stream = (movie, cb) => {
   if (torrentUrl === undefined)
     throw new Error('no torrent with 720p or 1080p quality')
 
-  torrentClient.add(getMovieTorrentUrl(movie), (torrent) => {
+  let movieDir = os.homedir() + '/movies/'
+  torrentClient.add(getMovieTorrentUrl(movie), { path: movieDir }, (torrent) => {
 
     torrent.on('done', () => {
       console.log('torrent download finished for movie ' + movie.title_long)
@@ -57,13 +59,16 @@ let remove = (movie) => {
 /* returns undefined if there isnt 720p or 1080p */
 let getMovieTorrentUrl = (movie) => {
   let torrent720p
+  let torrent1080p
   movie.torrents.forEach((torrent) => {
-    if (torrent.quality === '1080p')
-      return torrent.url
+    if (torrent1080p === undefined && torrent.quality === '1080p')
+      torrent1080p = torrent
     if (torrent720p === undefined && torrent.quality === '720p')
       torrent720p = torrent
   })
-  return torrent720p.url
+  if (torrent1080p === undefined)
+    return torrent720p.url
+  return torrent1080p.url
 }
 
 module.exports = {

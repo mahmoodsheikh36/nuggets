@@ -6,8 +6,9 @@ const yts = require('./yts.js'),
 
 let movies = []
 let scrollAmount
-let currentMovie
+let movieBeingPreviewd
 let moviePageIndex = 0
+let movieBeingWatched
 
 let $ = (query) => {
   return document.querySelector(query)
@@ -41,16 +42,9 @@ let getMostDownloadedMovies = (moviesPerPage=50, pages=1, page=1) => {
   }, {limit: moviesPerPage, sort_by: 'download_count', page:page})
 }
 
-let addMovies = (movies) => {
-  for (let i = 0; i < movies.length; ++i) {
-    addMovie(movies[i])
-  }
-}
-
-let showMovies = () => {
-  hide($('#preview_container'))
-  show($('#movies'))
-  document.documentElement.scrollTop = scrollAmount
+let nextMostDownloadedMoviesPage = () => {
+  getMostDownloadedMovies(50, 1, moviePageIndex)
+  moviePageIndex++
 }
 
 let addMovie = (movie) => {
@@ -79,35 +73,59 @@ let addMovie = (movie) => {
   moviesDiv.appendChild(movieDiv)
 }
 
+let addMovies = (movies) => {
+  for (let i = 0; i < movies.length; ++i) {
+    addMovie(movies[i])
+  }
+}
+
 let watchMovie = (movie) => {
-  torrent.stream(movie, (movieTorrentId) => {
-    hide($('#movies'), $('#preview_container'))
-    console.log(movieTorrentId)
-    torrent.append(movieTorrentId, '#video_container')
-  })
+  if (movieBeingWatched !== undefined) {
+    if (movieBeingWatched.id === movie.id) {
+      console.log('resuming movie ' + movie.title)
+      hide($('#movies'), $('#preview_container'))
+      show($('#video_container'))
+      movieBeingWatched = movie
+    }
+  } else {
+    torrent.stream(movie, (movieTorrentId) => {
+      hide($('#movies'), $('#preview_container'))
+      show($('#video_container'))
+      // console.log(movieTorrentId)
+      torrent.append(movieTorrentId, '#video_container')
+      movieBeingWatched = movie
+    })
+  }
 }
 
 let previewMovie = (movie) => {
-  hide($('#movies'))
+  hide($('#movies'), $('#video_container'))
   $('#preview_title').innerHTML = movie.title
   $('#preview_year').innerHTML  = movie.year
   $('#preview_desc').innerHTML  = movie.description_full
   $('#preview_image').src       = movie.large_cover_image
   showFlexDisplay($('#preview_container'))
-  currentMovie = movie
+  movieBeingPreviewd = movie
 }
 
 let viewMovieList = () => {
   let movieVideo = getMovieVideoElement()
   if (movieVideo !== null)
-    $('#movie_video').pause()
+    movieVideo.pause()
   hide($('#video_container'))
   hide($('#preview_container'))
-  show($('#movies'))
+  showFlexDisplay($('#movies'))
+  document.documentElement.scrollTop = scrollAmount
 }
 
 let getMovieVideoElement = () => {
-  return $('#video_container').firstElementChild
+  let videoContainer = $('#video_container')
+  for (let i = 0; i < videoContainer.childElementCount; ++i) {
+    let child = videoContainer.children[i]
+    if (child.tagName === 'VIDEO')
+      return child
+  }
+  return null
 }
 
 /* shortcuts */
@@ -119,27 +137,29 @@ window.onload = () => {
   moviePageIndex++
 }
 
-let nextMostDownloadedMoviePages = () => {
-  getMostDownloadedMovies(50, 1, moviePageIndex)
-  moviePageIndex++
-}
-
+/* movie data logging */
+let previousMovie
 let increaseWatchTime = (movie, cb) => {
   let homeDir = os.homedir()
   let dataFile = homeDir + '/mydata/movie_data.json'
   fs.readFile(dataFile, (err, content) => {
-    if (err) throw err
+    if (err) {
+      throw err
+      alert(err)
+    }
     let movies = JSON.parse(content)
     let foundMovie = false
     movies.forEach((savedMovie) => {
       if (savedMovie.id === movie.id) {
         foundMovie = true
         savedMovie.sec_watched++;
+        if (movie.id !== previousMovie.id)
+          savedMovie.times_played++
       }
     })
 
-    let simpleMovieData = {}
     if (!foundMovie) {
+      let simpleMovieData = {}
       simpleMovieData.id            = movie.id
       simpleMovieData.title         = movie.title
       simpleMovieData.title_english = movie.title_english
@@ -147,6 +167,7 @@ let increaseWatchTime = (movie, cb) => {
       simpleMovieData.genres        = movie.genres
       simpleMovieData.runtime       = movie.runtime
       simpleMovieData.sec_watched   = 1
+      simpleMovieData.times_played  = 1
       /*
       movieData.cast          = []
       movie.cast.forEach((actor) => {
@@ -157,20 +178,25 @@ let increaseWatchTime = (movie, cb) => {
     }
     
     fs.writeFile(dataFile, JSON.stringify(movies, null, 2), (err) => {
-      if (err) throw err
+      if (err) {
+        throw err
+        alert(err)
+      }
+      previousMovie = movie
       cb()
     })
 
   })
 }
 
-/* movie data logging */
 let collectData = () => {
-  if (typeof currentMovie === 'object') {
-    let video = $('#video_container').firstElementChild
+  if (typeof movieBeingWatched === 'object') {
+    let video = getMovieVideoElement()
     if (video !== null) {
-      if (!video.paused) {
-        increaseWatchTime(currentMovie, () => {
+      let is_movie_playing
+      is_movie_playing = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2
+      if (is_movie_playing) {
+        increaseWatchTime(movieBeingWatched, () => {
           setTimeout(collectData, 1000)
         })
         return
@@ -184,9 +210,13 @@ collectData()
 
 /* button clicking events */
 $('#watch_button').onclick = () => {
-  watchMovie(currentMovie)
+  watchMovie(movieBeingPreviewd)
 }
 
-$('#close_button').onclick = () => {
+$('#preview_close_button').onclick = () => {
   viewMovieList()
+}
+
+$('#video_close_button').onclick = () => {
+  previewMovie(movieBeingPreviewd)
 }
