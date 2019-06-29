@@ -26,7 +26,7 @@ let showFlexDisplay = (domElement) => {
   domElement.style.display = 'flex';
 }
 
-let getMostDownloadedMovies = (moviesPerPage=50, pages=1, page=1, args={}) => {
+let getMostDownloadedMovies = (moviesPerPage=50, pages=1, page=1) => {
   if (pages < 1)
     return
   console.log('fetching movie page of size', moviesPerPage)
