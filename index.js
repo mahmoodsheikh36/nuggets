@@ -26,7 +26,7 @@ let showFlexDisplay = (domElement) => {
   domElement.style.display = 'flex';
 }
 
-let getMostDownloadedMovies = (moviesPerPage=50, pages=1, page=1) => {
+let getMostDownloadedMovies = (moviesPerPage=50, pages=1, page=1, args={}) => {
   if (pages < 1)
     return
   console.log('fetching movie page of size', moviesPerPage)
@@ -40,6 +40,20 @@ let getMostDownloadedMovies = (moviesPerPage=50, pages=1, page=1) => {
       console.error('status code returned from yts is', statusCode)
     }
   }, {limit: moviesPerPage, sort_by: 'download_count', page:page})
+}
+
+let fetchMovies = (pages=1, page=1, ytsArgs) => {
+  if (pages < 1)
+    return
+  yts.fetchMovies((content, statusCode) => {
+    if (statusCode == 200) {
+      let movies = JSON.parse(content).data.movies
+      addMovies(movies)
+      fetchMovies(pages - 1, page + 1, ytsArgs)
+    } else {
+      console.error('status code returned from yts is', statusCode)
+    }
+  }, ytsArgs)
 }
 
 let nextMostDownloadedMoviesPage = () => {
@@ -77,6 +91,14 @@ let addMovies = (movies) => {
   for (let i = 0; i < movies.length; ++i) {
     addMovie(movies[i])
   }
+}
+
+let removeAllMovies = () => {
+  let moviesContainer = $('#movies')
+  while (moviesContainer.lastChild !== null) {
+    moviesContainer.removeChild(moviesContainer.lastChild)
+  }
+  movies = []
 }
 
 let watchMovie = (movie) => {
@@ -133,15 +155,13 @@ let getMovieVideoElement = () => {
 
 window.onload = () => {
   hide($('#preview_container'));
-  getMostDownloadedMovies(50, 1)
+  // getMostDownloadedMovies(50, 1)
   moviePageIndex++
 }
 
 /* movie data logging */
 let previousMovie
-let increaseWatchTime = (movie, cb) => {
-  let homeDir = os.homedir()
-  let dataFile = homeDir + '/mydata/movie_data.json'
+let increaseWatchTime = (movie, dataFile, cb) => {
   fs.readFile(dataFile, (err, content) => {
     if (err) {
       throw err
@@ -153,7 +173,7 @@ let increaseWatchTime = (movie, cb) => {
       if (savedMovie.id === movie.id) {
         foundMovie = true
         savedMovie.sec_watched++;
-        if (movie.id !== previousMovie.id)
+        if (previousMovie === undefined || movie.id !== previousMovie.id)
           savedMovie.times_played++
       }
     })
@@ -190,13 +210,21 @@ let increaseWatchTime = (movie, cb) => {
 }
 
 let collectData = () => {
+  let homeDir = os.homedir()
+  let dataFile = homeDir + '/mydata/movie_data.json'
+
+  if (!fs.existsSync(dataFile)) {
+    console.log('data directory doesnt exist, not saving data')
+    return
+  }
+
   if (typeof movieBeingWatched === 'object') {
     let video = getMovieVideoElement()
     if (video !== null) {
       let is_movie_playing
       is_movie_playing = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2
       if (is_movie_playing) {
-        increaseWatchTime(movieBeingWatched, () => {
+        increaseWatchTime(movieBeingWatched, dataFile, () => {
           setTimeout(collectData, 1000)
         })
         return
