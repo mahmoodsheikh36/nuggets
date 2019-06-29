@@ -7,6 +7,10 @@
 #+NAME:    screenshot2
 [[./screenshots/screenshot2.png]]
 
+#+CAPTION: screenshot of movie previewing
+#+NAME:    screenshot3
+[[./screenshots/screenshot3.png]]
+
 * explanation
 this is a program written using electronjs and WebTorrent and uses YTS web API
 to make movie torrent streaming easier than it has ever been
