@@ -84,7 +84,6 @@ div.movie {
     height: 90%;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: flex-start;
 }
 
 .preview_title {
@@ -119,14 +118,14 @@ div.movie {
     color: darkred;
 }
 
-.watch_button {
+.black_button {
     background-color: black;
     color: darkgrey;
     border: 0px;
-    align-self: flex-start;
-    flex: 0 0 5%;
+    flex: 0 0 10%;
+    margin-right: 10px;
 }
-.watch_button:hover {
+.black_button:hover {
     background-color: #300010;
 }
 
@@ -142,4 +141,21 @@ div.movie {
     width: 100%;
     margin: 0px;
     padding: 0px;
+}
+
+.trailer_container {
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.trailer{
+    height: 100%;
+    width: 100%;
+}
+
+.preview_buttons_container {
+    display: flex;
+    flex-flow: row wrap;
 }
