@@ -26,39 +26,29 @@ let showFlexDisplay = (domElement) => {
   domElement.style.display = 'flex';
 }
 
-let getMostDownloadedMovies = (moviesPerPage=50, pages=1, page=1) => {
-  if (pages < 1)
-    return
-  console.log('fetching movie page of size', moviesPerPage)
-  yts.fetchMovies((content, statusCode) => {
-    if (statusCode == 200) {
-      let movies = JSON.parse(content).data.movies
-      addMovies(movies)
-      console.log('fetched movie page')
-      getMostDownloadedMovies(moviesPerPage, pages - 1, page + 1)
-    } else {
-      console.error('status code returned from yts is', statusCode)
-    }
-  }, {limit: moviesPerPage, sort_by: 'download_count', page:page})
+let fetchMovies = (pages=1, ytsArgs, cb) => {
+  if (pages < 1) {
+    if (cb)
+      cb()
+  } else {
+    yts.fetchMovies((content, statusCode) => {
+      if (statusCode == 200) {
+        let movies = JSON.parse(content).data.movies
+        addMovies(movies)
+        ytsArgs.page++
+        fetchMovies(pages - 1, ytsArgs)
+      } else {
+        console.error('status code returned from yts is', statusCode)
+      }
+    }, ytsArgs)
+  }
 }
 
-let fetchMovies = (pages=1, page=1, ytsArgs) => {
-  if (pages < 1)
-    return
-  yts.fetchMovies((content, statusCode) => {
-    if (statusCode == 200) {
-      let movies = JSON.parse(content).data.movies
-      addMovies(movies)
-      fetchMovies(pages - 1, page + 1, ytsArgs)
-    } else {
-      console.error('status code returned from yts is', statusCode)
-    }
-  }, ytsArgs)
-}
-
-let nextMostDownloadedMoviesPage = () => {
-  getMostDownloadedMovies(50, 1, moviePageIndex)
-  moviePageIndex++
+let refetchMovies = (pages=1, ytsArgs) => {
+  removeAllMovies()
+  fetchMovies(pages, ytsArgs, () => {
+    console.log('refetched movies')
+  })
 }
 
 let addMovie = (movie) => {
@@ -106,22 +96,49 @@ let watchMovie = (movie) => {
     if (movieBeingWatched.id === movie.id) {
       console.log('resuming movie ' + movie.title)
       hide($('#movies'), $('#preview_container'))
+      removeTrailer()
       show($('#video_container'))
       movieBeingWatched = movie
     }
   } else {
+    removeOldMovieVideo()
     torrent.stream(movie, (movieTorrentId) => {
       hide($('#movies'), $('#preview_container'))
+      removeTrailer()
       show($('#video_container'))
       // console.log(movieTorrentId)
       torrent.append(movieTorrentId, '#video_container')
       movieBeingWatched = movie
+      console.log('what')
+      getMovieVideo().onkeyup = (event) => {
+        event.stopImmediatePropagation()
+        switch (event.keyCode) {
+        case 76  : // l
+          getMovieVideo().currentTime += 10
+          break
+        case 72: // h
+          getMovieVideo().currentTime -= 10
+          break
+        case 70: // f
+          getMovieVideo().requestFullscreen()
+          break
+        }
+      }
     })
   }
 }
 
+let removeOldMovieVideo = () => {
+  if ($('#trailer_container video') !== null)
+    $('#trailer_container').removeChild($('#trailer_container video'))
+}
+
 let previewMovie = (movie) => {
+  removeTrailer()
   hide($('#movies'), $('#video_container'))
+  let movieVideo = getMovieVideo()
+  if (movieVideo !== null)
+    movieVideo.pause()
   $('#preview_title').innerHTML = movie.title
   $('#preview_year').innerHTML  = movie.year
   $('#preview_desc').innerHTML  = movie.description_full
@@ -131,16 +148,44 @@ let previewMovie = (movie) => {
 }
 
 let viewMovieList = () => {
-  let movieVideo = getMovieVideoElement()
+  let movieVideo = getMovieVideo()
   if (movieVideo !== null)
     movieVideo.pause()
-  hide($('#video_container'))
-  hide($('#preview_container'))
+  removeTrailer()
+  hide($('#video_container'), $('#preview_container'))
   showFlexDisplay($('#movies'))
   document.documentElement.scrollTop = scrollAmount
 }
 
-let getMovieVideoElement = () => {
+let watchTrailer = (movie) => {
+  if (movie.yt_trailer_code === '') {
+    console.error('movie ' + movie.title + ' has no trailer link')
+    return
+  }
+
+  let ytIframe = document.createElement('iframe')
+  ytIframe.className = 'trailer'
+  ytIframe.id        = 'trailer'
+
+  hide($('#video_container'), $('#preview_container'), $('#movies'))
+
+  let ytUrl = 'https://www.youtube.com/embed/' + movie.yt_trailer_code
+  ytUrl += '?autoplay=1'
+
+  ytIframe.src = ytUrl
+
+  $('#trailer_container').appendChild(ytIframe)
+
+  show($('#trailer_container'))
+}
+
+let removeTrailer = () => {
+  if ($('#trailer') !== null)
+    $('#trailer_container').removeChild($('#trailer'))
+  hide($('#trailer_container'))
+}
+
+let getMovieVideo = () => {
   let videoContainer = $('#video_container')
   for (let i = 0; i < videoContainer.childElementCount; ++i) {
     let child = videoContainer.children[i]
@@ -150,13 +195,12 @@ let getMovieVideoElement = () => {
   return null
 }
 
-/* shortcuts */
-// window.addEventListener('keyup', function () { console.log(arguments) }, true)
-
 window.onload = () => {
-  hide($('#preview_container'));
+  fetchMovies(2, {page: 1, limit: 50, sort_by: 'seeds'})
   // getMostDownloadedMovies(50, 1)
-  moviePageIndex++
+  // moviePageIndex++
+  var theVideo = document.getElementById("cspd_video")
+  // document.onkeyup = handleKeyUp
 }
 
 /* movie data logging */
@@ -219,7 +263,7 @@ let collectData = () => {
   }
 
   if (typeof movieBeingWatched === 'object') {
-    let video = getMovieVideoElement()
+    let video = getMovieVideo()
     if (video !== null) {
       let is_movie_playing
       is_movie_playing = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2
@@ -246,5 +290,10 @@ $('#preview_close_button').onclick = () => {
 }
 
 $('#video_close_button').onclick = () => {
+  getMovieVideo().pause()
   previewMovie(movieBeingPreviewd)
+}
+
+$('#watch_trailer_button').onclick = () => {
+  watchTrailer(movieBeingPreviewd)
 }
