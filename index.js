@@ -7,7 +7,6 @@ const yts = require('./yts.js'),
 let movies = []
 let scrollAmount
 let movieBeingPreviewd
-let moviePageIndex = 0
 let movieBeingWatched
 
 let $ = (query) => {
@@ -99,33 +98,36 @@ let watchMovie = (movie) => {
       removeTrailer()
       show($('#video_container'))
       movieBeingWatched = movie
+      return
     }
-  } else {
-    removeOldMovieVideo()
-    torrent.stream(movie, (movieTorrentId) => {
-      hide($('#movies'), $('#preview_container'))
-      removeTrailer()
-      show($('#video_container'))
-      // console.log(movieTorrentId)
-      torrent.append(movieTorrentId, '#video_container')
-      movieBeingWatched = movie
-      console.log('what')
-      getMovieVideo().onkeyup = (event) => {
-        event.stopImmediatePropagation()
-        switch (event.keyCode) {
-        case 76  : // l
-          getMovieVideo().currentTime += 10
-          break
-        case 72: // h
-          getMovieVideo().currentTime -= 10
-          break
-        case 70: // f
-          getMovieVideo().requestFullscreen()
-          break
-        }
-      }
-    })
   }
+  removeOldMovieVideo()
+  torrent.stream(movie, (movieTorrent) => {
+    let torrentId = movieTorrent.magnetURI
+    let moviePath = movieTorrent.path + torrent.name
+    fs.writeFile(moviePath + '/movie_id', movie.id, () => {
+      console.log('saved movie id for \'' + movie.title + '\'')
+    })
+    hide($('#movies'), $('#preview_container'))
+    removeTrailer()
+    show($('#video_container'))
+    torrent.append(torrentId, '#video_container')
+    movieBeingWatched = movie
+    getMovieVideo().onkeyup = (event) => {
+      event.stopImmediatePropagation()
+      switch (event.keyCode) {
+      case 76  : // l
+        getMovieVideo().currentTime += 10
+        break
+      case 72: // h
+        getMovieVideo().currentTime -= 10
+        break
+      case 70: // f
+        getMovieVideo().requestFullscreen()
+        break
+      }
+    }
+  })
 }
 
 let removeOldMovieVideo = () => {
@@ -196,11 +198,23 @@ let getMovieVideo = () => {
 }
 
 window.onload = () => {
-  fetchMovies(2, {page: 1, limit: 50, sort_by: 'seeds'})
-  // getMostDownloadedMovies(50, 1)
-  // moviePageIndex++
-  var theVideo = document.getElementById("cspd_video")
-  // document.onkeyup = handleKeyUp
+  fetchMovies(2, {page: 1, limit: 50, sort_by: 'seeds', genre: 'romance'})
+}
+
+let updateMovieData = (movie, dataFile, cb) => {
+  fs.readFile(dataFile, (err, content) => {
+    if (err) {
+      throw err
+      alert(err)
+    }
+    let movies = JSON.parse(content)
+    let foundMovie = false
+    movies.forEach((savedMovie) => {
+      if (savedMovie.id === movie.id) {
+        foundMovie = true
+      }
+    })
+  })
 }
 
 /* movie data logging */

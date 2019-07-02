@@ -32,7 +32,7 @@ let stream = (movie, cb) => {
       console.warn(err)
     })
 
-    cb(torrent.magnetURI)
+    cb(torrent)
 
   })
 }
