@@ -23,18 +23,17 @@ body {
 
 div.movie:hover {
     cursor: pointer;
-    margin-bottom: 0.4em;
 }
 
 div.movie img {
     height: auto;
-    width: 140px;
+    width: 125px;
 }
 
 div.title {
     margin-bottom: 2px;
     margin-left: 2px;
-    max-width: 130px;
+    max-width: 115px;
     font-size: 13px;
     font-weight: bold;
     text-overflow: ellipsis;
@@ -44,7 +43,7 @@ div.title {
 
 div.movie {
     border: 1px solid black;
-    margin-bottom: 0.4em;
+    margin-bottom: 0.3em;
 }
 
 .preview_container {

@@ -64,7 +64,6 @@ let addMovie = (movie) => {
 
   movieDiv.className = 'movie'
   movieDiv.onclick = () => {
-    scrollAmount = document.documentElement.scrollTop
     previewMovie(movie)
   }
 
@@ -150,6 +149,7 @@ let removeMovieVideo = () => {
 }
 
 let previewMovie = (movie) => {
+  scrollAmount = document.documentElement.scrollTop
   removeTrailer()
   removeMovieVideo()
   hide($('#movies'), $('#video_container'))
@@ -331,6 +331,7 @@ $('#watch_trailer_button').onclick = () => {
 let setHoveredMovie = (movie) => {
   if (hoveredMovie !== undefined) {
     hoveredMovie.domElement.style.borderColor = ''
+    hoveredMovie.domElement.style.backgroundColor = ''
   }
   hoveredMovie = movie
   if (document.documentElement.offsetHeight + document.documentElement.scrollTop < movie.domElement.offsetTop + movie.domElement.offsetHeight)
@@ -338,13 +339,15 @@ let setHoveredMovie = (movie) => {
   if (movie.domElement.offsetTop < document.documentElement.scrollTop)
     document.documentElement.scrollTop = movie.domElement.offsetTop
   movie.domElement.style.borderColor = 'red'
+  movie.domElement.style.backgroundColor = '#2d7758'
 }
 
 /* vim navigation keys yay! */
 document.onkeydown = (event) => {
+  console.log(event.key)
   if (isVisible($('#movies'))) {
-    switch (event.keyCode) {
-    case 74: // j
+    switch (event.key) {
+    case 'j': // j
       if (hoveredMovie === undefined)
         hoveredMovie = movies[0]
       for (let i = hoveredMovie.index; i < movies.length; ++i) {
@@ -356,7 +359,7 @@ document.onkeydown = (event) => {
         }
       }
       break
-    case 75: // k
+    case 'k': // k
       if (hoveredMovie === undefined)
         hoveredMovie = movies[0]
       for (let i = hoveredMovie.index; i >= 0; --i) {
@@ -368,25 +371,44 @@ document.onkeydown = (event) => {
         }
       }
       break
-    case 76: // l
+    case 'l': // l
       if (hoveredMovie === undefined)
         hoveredMovie = movies[0]
       if (hoveredMovie.index + 1 < movies.length) {
         setHoveredMovie(movies[hoveredMovie.index + 1])
       }
       break
-    case 72: // h
+    case 'h': // h
       if (hoveredMovie === undefined)
         hoveredMovie = movies[0]
       if (hoveredMovie.index - 1 >= 0) {
         setHoveredMovie(movies[hoveredMovie.index - 1])
       }
       break
-    case 13: // enter
+    case ' ':
+      event.preventDefault()
+    case 'Enter': // enter
       if (hoveredMovie === undefined)
         hoveredMovie = movies[0]
       previewMovie(hoveredMovie)
       break
+    case 'G': // g
+      document.documentElement.scrollTop = document.documentElement.scrollHeight
+      setHoveredMovie(movies[movies.length - 1])
+      break
+    case 'g':
+      document.documentElement.scrollTop = 0
+      setHoveredMovie(movies[0])
+      break
+    case 'Escape':
+      break
+    }
+  } else if (isVisible($('#preview_container'))) {
+    switch (event.key) {
+    case 'Escape':
+      viewMovieList()
+      break
     }
   }
+
 }
