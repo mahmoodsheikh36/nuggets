@@ -214,7 +214,7 @@ let getMovieVideo = () => {
 }
 
 window.onload = () => {
-  fetchMovies(2, {page: 1, limit: 50, sort_by: 'seeds', genre: 'romance'})
+  fetchMovies(2, {page: 1, limit: 50, sort_by: 'peers', genre: 'romance'})
 }
 
 let updateMovieData = (movie, dataFile, cb) => {
@@ -342,9 +342,8 @@ let setHoveredMovie = (movie) => {
   movie.domElement.style.backgroundColor = '#2d7758'
 }
 
-/* vim navigation keys yay! */
+/* vim keys yay! */
 document.onkeydown = (event) => {
-  console.log(event.key)
   if (isVisible($('#movies'))) {
     switch (event.key) {
     case 'j': // j
