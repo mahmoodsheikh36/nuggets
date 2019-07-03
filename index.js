@@ -8,6 +8,7 @@ let movies = []
 let scrollAmount
 let movieBeingPreviewd
 let movieBeingWatched
+let hoveredMovie
 
 let $ = (query) => {
   return document.querySelector(query)
@@ -15,14 +16,17 @@ let $ = (query) => {
 
 let hide = (...domElements) => {
   domElements.forEach((domElement) => {
-    domElement.style.display = 'none';
+    domElement.style.display = 'none'
   })
 }
 let show = (domElement) => {
-  domElement.style.display = 'block';
+  domElement.style.display = 'block'
 }
 let showFlexDisplay = (domElement) => {
-  domElement.style.display = 'flex';
+  domElement.style.display = 'flex'
+}
+let isVisible = (domElement) => {
+  return domElement.style.display !== 'none'
 }
 
 let fetchMovies = (pages=1, ytsArgs, cb) => {
@@ -44,6 +48,7 @@ let fetchMovies = (pages=1, ytsArgs, cb) => {
 }
 
 let refetchMovies = (pages=1, ytsArgs) => {
+  hoveredMovie = undefined
   removeAllMovies()
   fetchMovies(pages, ytsArgs, () => {
     console.log('refetched movies')
@@ -52,9 +57,11 @@ let refetchMovies = (pages=1, ytsArgs) => {
 
 let addMovie = (movie) => {
   movies.push(movie)
+  movie.index = movies.length - 1
   // main div
   let movieDiv = document.createElement('div')
-  // movie.domElement = movieDiv
+  movie.domElement = movieDiv
+
   movieDiv.className = 'movie'
   movieDiv.onclick = () => {
     scrollAmount = document.documentElement.scrollTop
@@ -71,6 +78,10 @@ let addMovie = (movie) => {
   titleDiv.innerHTML = movie.title
   titleDiv.className = 'title'
   movieDiv.append(titleDiv)
+
+  movieDiv.onmouseover = (event) => {
+    setHoveredMovie(movie)
+  }
 
   let moviesDiv = document.getElementById('movies')
   moviesDiv.appendChild(movieDiv)
@@ -91,29 +102,32 @@ let removeAllMovies = () => {
 }
 
 let watchMovie = (movie) => {
+  /*
   if (movieBeingWatched !== undefined) {
     if (movieBeingWatched.id === movie.id) {
       console.log('resuming movie ' + movie.title)
       hide($('#movies'), $('#preview_container'))
       removeTrailer()
+      removeMovieVideo()
       show($('#video_container'))
       movieBeingWatched = movie
       return
     }
   }
-  removeOldMovieVideo()
+  */
   torrent.stream(movie, (movieTorrent) => {
     let torrentId = movieTorrent.magnetURI
     let moviePath = movieTorrent.path + torrent.name
-    fs.writeFile(moviePath + '/movie_id', movie.id, () => {
-      console.log('saved movie id for \'' + movie.title + '\'')
+    fs.writeFile(moviePath + '/details.json', JSON.stringify(movie, null, 2), () => {
+      console.log('saved movie details for \'' + movie.title + '\'')
     })
     hide($('#movies'), $('#preview_container'))
+    removeMovieVideo()
     removeTrailer()
     show($('#video_container'))
     torrent.append(torrentId, '#video_container')
     movieBeingWatched = movie
-    getMovieVideo().onkeyup = (event) => {
+    getMovieVideo().onkeydown = (event) => {
       event.stopImmediatePropagation()
       switch (event.keyCode) {
       case 76  : // l
@@ -130,13 +144,14 @@ let watchMovie = (movie) => {
   })
 }
 
-let removeOldMovieVideo = () => {
+let removeMovieVideo = () => {
   if ($('#trailer_container video') !== null)
     $('#trailer_container').removeChild($('#trailer_container video'))
 }
 
 let previewMovie = (movie) => {
   removeTrailer()
+  removeMovieVideo()
   hide($('#movies'), $('#video_container'))
   let movieVideo = getMovieVideo()
   if (movieVideo !== null)
@@ -154,6 +169,7 @@ let viewMovieList = () => {
   if (movieVideo !== null)
     movieVideo.pause()
   removeTrailer()
+  removeMovieVideo()
   hide($('#video_container'), $('#preview_container'))
   showFlexDisplay($('#movies'))
   document.documentElement.scrollTop = scrollAmount
@@ -294,7 +310,7 @@ let collectData = () => {
 
 collectData()
 
-/* button clicking events */
+/* general events */
 $('#watch_button').onclick = () => {
   watchMovie(movieBeingPreviewd)
 }
@@ -310,4 +326,67 @@ $('#video_close_button').onclick = () => {
 
 $('#watch_trailer_button').onclick = () => {
   watchTrailer(movieBeingPreviewd)
+}
+
+let setHoveredMovie = (movie) => {
+  if (hoveredMovie !== undefined) {
+    hoveredMovie.domElement.style.borderColor = ''
+  }
+  hoveredMovie = movie
+  if (document.documentElement.offsetHeight + document.documentElement.scrollTop < movie.domElement.offsetTop + movie.domElement.offsetHeight)
+    document.documentElement.scrollTop = (movie.domElement.offsetTop + movie.domElement.offsetHeight) - document.documentElement.offsetHeight
+  if (movie.domElement.offsetTop < document.documentElement.scrollTop)
+    document.documentElement.scrollTop = movie.domElement.offsetTop
+  movie.domElement.style.borderColor = 'red'
+}
+
+/* vim navigation keys yay! */
+document.onkeydown = (event) => {
+  if (isVisible($('#movies'))) {
+    switch (event.keyCode) {
+    case 74: // j
+      if (hoveredMovie === undefined)
+        hoveredMovie = movies[0]
+      for (let i = hoveredMovie.index; i < movies.length; ++i) {
+        if (movies[i].domElement.offsetTop > hoveredMovie.domElement.offsetTop) {
+          if (movies[i].domElement.offsetLeft === hoveredMovie.domElement.offsetLeft) {
+            setHoveredMovie(movies[i])
+            break
+          }
+        }
+      }
+      break
+    case 75: // k
+      if (hoveredMovie === undefined)
+        hoveredMovie = movies[0]
+      for (let i = hoveredMovie.index; i >= 0; --i) {
+        if (movies[i].domElement.offsetTop < hoveredMovie.domElement.offsetTop) {
+          if (movies[i].domElement.offsetLeft === hoveredMovie.domElement.offsetLeft) {
+            setHoveredMovie(movies[i])
+            break
+          }
+        }
+      }
+      break
+    case 76: // l
+      if (hoveredMovie === undefined)
+        hoveredMovie = movies[0]
+      if (hoveredMovie.index + 1 < movies.length) {
+        setHoveredMovie(movies[hoveredMovie.index + 1])
+      }
+      break
+    case 72: // h
+      if (hoveredMovie === undefined)
+        hoveredMovie = movies[0]
+      if (hoveredMovie.index - 1 >= 0) {
+        setHoveredMovie(movies[hoveredMovie.index - 1])
+      }
+      break
+    case 13: // enter
+      if (hoveredMovie === undefined)
+        hoveredMovie = movies[0]
+      previewMovie(hoveredMovie)
+      break
+    }
+  }
 }
