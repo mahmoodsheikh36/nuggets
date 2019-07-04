@@ -16,10 +16,9 @@ this is a program written using electronjs and WebTorrent and uses YTS web API
 to make movie torrent streaming easier than it has ever been
 
 * features
-#+BEGIN_VERSE
 vim-like keys to navigate between movies, you don't need to use the mouse at all
+
 ability to stream multiple torrents at once
-#+END_VERSE
 
 * credits
 inspired by PopcornTime, written by me
