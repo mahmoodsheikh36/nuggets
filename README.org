@@ -16,7 +16,8 @@ this is a program written using electronjs and WebTorrent and uses YTS web API
 to make movie torrent streaming easier than it has ever been
 
 * features
-vim-like keys to navigate between movies, you don't need to use the mouse at all\
+vim-like keys to navigate between movies, you don't need to use the mouse at all
+#+HTML: <br>
 ability to stream multiple torrents at once
 
 * credits
