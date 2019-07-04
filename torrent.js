@@ -51,9 +51,11 @@ let append = (torrentId, domQuery) => {
   })
 }
 
+/* doesnt work, should use torrent.magnetURI when calling client.remove */
 let remove = (movie) => {
   torrentClient.remove(getMovieTorrentUrl(movie))
 }
+
 
 /* looks for 1080p or 720p quality */
 /* returns undefined if there isnt 720p or 1080p */

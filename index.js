@@ -4,6 +4,8 @@ const fs = require('fs'),
 const yts = require('./yts.js'),
       torrent = require('./torrent.js')
 
+const ALLOW_MOUSE_NAVIGATION = false
+
 let movies = []
 let scrollAmount
 let movieBeingPreviewd
@@ -78,8 +80,10 @@ let addMovie = (movie) => {
   titleDiv.className = 'title'
   movieDiv.append(titleDiv)
 
-  movieDiv.onmouseover = (event) => {
-    setHoveredMovie(movie)
+  if (ALLOW_MOUSE_NAVIGATION) {
+    movieDiv.onmouseover = (event) => {
+      setHoveredMovie(movie)
+    }
   }
 
   let moviesDiv = document.getElementById('movies')
@@ -100,62 +104,68 @@ let removeAllMovies = () => {
   movies = []
 }
 
-let watchMovie = (movie) => {
-  /*
-  if (movieBeingWatched !== undefined) {
-    if (movieBeingWatched.id === movie.id) {
-      console.log('resuming movie ' + movie.title)
-      hide($('#movies'), $('#preview_container'))
-      removeTrailer()
-      removeMovieVideo()
-      show($('#video_container'))
-      movieBeingWatched = movie
-      return
+let setMovieVideo = (movie) => {
+  movieBeingWatched = movie
+  getMovieVideo().onkeydown = (event) => {
+    event.stopImmediatePropagation()
+    switch (event.key) {
+    case 'l':
+      getMovieVideo().currentTime += 10
+      break
+    case 'h':
+      getMovieVideo().currentTime -= 10
+      break
+    case 'f':
+      if (document.fullscreenElement === getMovieVideo())
+        document.exitFullscreen()
+      else
+        getMovieVideo().requestFullscreen()
+      break
+    case 'Escape':
+      previewMovie(movieBeingPreviewd)
+      break
     }
   }
-  */
-  torrent.stream(movie, (movieTorrent) => {
-    let torrentId = movieTorrent.magnetURI
-    let moviePath = movieTorrent.path + torrent.name
-    fs.writeFile(moviePath + '/details.json', JSON.stringify(movie, null, 2), () => {
-      console.log('saved movie details for \'' + movie.title + '\'')
-    })
-    hide($('#movies'), $('#preview_container'))
-    removeMovieVideo()
-    removeTrailer()
-    show($('#video_container'))
+  hide($('#movies'), $('#preview_container'))
+  removeTrailer()
+  show($('#video_container'))
+  getMovieVideo().focus()
+}
+
+let watchMovie = (movie) => {
+  removeMovieVideo()
+  if (movie.torrent !== undefined) {
+    console.log('torrent already being streamed for movie \'' + movie.title + '\'')
+    let torrentId = movie.torrent.magnetURI
     torrent.append(torrentId, '#video_container')
-    movieBeingWatched = movie
-    getMovieVideo().onkeydown = (event) => {
-      event.stopImmediatePropagation()
-      switch (event.keyCode) {
-      case 76  : // l
-        getMovieVideo().currentTime += 10
-        break
-      case 72: // h
-        getMovieVideo().currentTime -= 10
-        break
-      case 70: // f
-        getMovieVideo().requestFullscreen()
-        break
-      }
-    }
-  })
+    setMovieVideo(movie)
+  } else {
+    torrent.stream(movie, (movieTorrent) => {
+      let torrentId = movieTorrent.magnetURI
+      let moviePath = movieTorrent.path + movieTorrent.name
+      fs.writeFile(moviePath + '/details.json', JSON.stringify(movie, null, 2), (err, data) => {
+        if (err) throw err
+        console.log('saved movie details for \'' + movie.title + '\'')
+      })
+      /* write details file before setting movie.torrent, torrent is circular */
+      movie.torrent = movieTorrent
+      torrent.append(torrentId, '#video_container')
+      setMovieVideo(movie)
+    })
+  }
 }
 
 let removeMovieVideo = () => {
-  if ($('#trailer_container video') !== null)
-    $('#trailer_container').removeChild($('#trailer_container video'))
+  if ($('#video_container video') !== null)
+    $('#video_container').removeChild($('#video_container video'))
 }
 
 let previewMovie = (movie) => {
+  removeMovieVideo()
   scrollAmount = document.documentElement.scrollTop
   removeTrailer()
   removeMovieVideo()
   hide($('#movies'), $('#video_container'))
-  let movieVideo = getMovieVideo()
-  if (movieVideo !== null)
-    movieVideo.pause()
   $('#preview_title').innerHTML = movie.title
   $('#preview_year').innerHTML  = movie.year
   $('#preview_desc').innerHTML  = movie.description_full
@@ -165,9 +175,7 @@ let previewMovie = (movie) => {
 }
 
 let viewMovieList = () => {
-  let movieVideo = getMovieVideo()
-  if (movieVideo !== null)
-    movieVideo.pause()
+  removeMovieVideo()
   removeTrailer()
   removeMovieVideo()
   hide($('#video_container'), $('#preview_container'))
@@ -320,8 +328,9 @@ $('#preview_close_button').onclick = () => {
 }
 
 $('#video_close_button').onclick = () => {
-  getMovieVideo().pause()
+  /* getMovieVideo().pause() */
   previewMovie(movieBeingPreviewd)
+  removeMovieVideo()
 }
 
 $('#watch_trailer_button').onclick = () => {
@@ -402,12 +411,18 @@ document.onkeydown = (event) => {
     case 'Escape':
       break
     }
-  } else if (isVisible($('#preview_container'))) {
+  }
+  if (isVisible($('#preview_container'))) {
     switch (event.key) {
     case 'Escape':
       viewMovieList()
       break
+    case 'w': // watch
+      watchMovie(movieBeingPreviewd)
+      break
+    case 't':
+      watchTrailer(movieBeingPreviewd)
+      break
     }
   }
-
 }

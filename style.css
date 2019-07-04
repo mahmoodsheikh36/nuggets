@@ -158,3 +158,19 @@ div.movie {
     display: flex;
     flex-flow: row wrap;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1d4738;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: #2d7758;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1d8748;
+}
