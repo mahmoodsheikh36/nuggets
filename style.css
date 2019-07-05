@@ -23,6 +23,7 @@ body {
 
 div.movie:hover {
     cursor: pointer;
+    border-color: blue;
 }
 
 div.movie img {
@@ -95,13 +96,16 @@ div.movie {
 
 .preview_year {
     font-weight: bold;
-    align-self: flex-start;
-    font-size: 20px;
+    font-size: 23px;
     height: 1%;
 }
 
 .preview_desc {
-    align-self: flex-start;
+}
+
+.preview_genres {
+    font-size: 17px;
+    font-style: italic;
 }
 
 .close_button {
@@ -157,6 +161,7 @@ div.movie {
 .preview_buttons_container {
     display: flex;
     flex-flow: row wrap;
+    height: 25px;
 }
 
 ::-webkit-scrollbar {
