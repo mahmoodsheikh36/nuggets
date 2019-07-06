@@ -1,54 +1,4 @@
-const http = require('http')
-const https = require('https')
-const url = require('url')
-
-
-/*
-  @options - options to set the url to, eg. hostname, port
- */
-let buildUrl = (options) => {
-  return url.parse(url.format({
-    protocol: options.port == 443 ? 'https' : 'http',
-    hostname: options.host,
-    pathname: options.path,
-    query: options.query,
-    port: options.port,
-  }))
-}
-
-
-/*
-  @url      - url returned from above 'buildUrl' function
-  @onResult - callback function to handle the content returned from request
-  @method   - http request method, eg. 'GET', 'POST'
- */
-let request = (url, onResult, method='GET') => {
-  const port = url.port === '443' ? https : http
-
-  let content = ''
-
-  const req = port.request({
-    host:     url.hostname,
-    path:     url.path,
-    method:   method,
-  }, (res) => {
-    res.setEncoding('utf8')
-
-    res.on('data', (chunk) => {
-      content += chunk
-    })
-
-    res.on('end', () => {
-      onResult(content, res.statusCode)
-    })
-  })
-
-  req.on('error', (err) => {
-    // res.send('error: ' + err.message)
-  })
-
-  req.end()
-}
+const request = require('./request.js')
 
 
 /*
@@ -95,9 +45,8 @@ let fetchMovies = (onResult=fetchMoviesCB,
       with_rt_ratings: with_rt_ratings,
     }
   }
-  let url = buildUrl(options)
 
-  request(url, onResult)
+  request.request(options, onResult)
 }
 
 
@@ -118,9 +67,8 @@ let fetchMovieDetails = (onResult, {movie_id, with_images, with_cast}={}) => {
       with_cast:   with_cast
     }
   }
-  let url = buildUrl(options)
 
-  request(url, onResult)
+  request.request(options, onResult)
 }
 
 module.exports = {

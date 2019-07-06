@@ -1,7 +1,7 @@
 const os = require('os'),
       fs = require('fs')
 
-let MOVIES_LOCATION = os.homedir() + '/movies/'
+const MOVIES_LOCATION = os.homedir() + '/movies/'
 
 let getSavedMovies = (cb) => {
   let savedMovies = []
@@ -17,7 +17,7 @@ let getSavedMovies = (cb) => {
 
     if (dirents.length == 0)
       cb([])
-    console.log('length of dirents: ' + dirents.length)
+    console.log(dirents.length + ' saved movies found')
 
     getAllSavedMovieDetails(dirents, dirents.length, savedMovies, () => {
       cb(savedMovies)

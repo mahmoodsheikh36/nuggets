@@ -3,7 +3,8 @@ const fs = require('fs'),
       os = require('os')
 const yts = require('./js/yts.js'),
       torrent = require('./js/torrent.js'),
-      movieLib = require('./js/movie.js')
+      movieLib = require('./js/movie.js'),
+      subtitles = require('./js/subtitles.js')
 
 const ALLOW_MOUSE_NAVIGATION = false
 
@@ -132,6 +133,32 @@ let setMovieVideo = (movie) => {
   show($('#video_container'))
   getMovieVideo().focus()
   getMovieVideo().requestFullscreen()
+
+}
+
+let addSubtitles = (movie) => {
+  let subtitles = document.createElement('track')
+  subtitles.src  = getMoviePath(movie) + '/subtitles.vtt'
+  subtitles.kind = 'subtitles'
+  subtitles.srclang = 'en'
+  subtitles.label = 'English'
+
+  getMovieVideo().appendChild(subtitles)
+  getMovieVideo().textTracks[0].mode = 'showing'
+}
+
+let delaySubtitles = (seconds) => {
+  let subtitlesTrack = getMovieVideo().textTracks[0]
+  for (let i = 0; i < subtitlesTrack.cues.length; ++i) {
+    let cue = subtitlesTrack.cues[i]
+    cue.startTime += seconds
+    cue.endTime += seconds
+  }
+  console.log(`delayed subtitles by ${seconds} seconds`)
+}
+
+let getMoviePath = (movie) => {
+  return movie.torrent.path + movie.torrent.name
 }
 
 let watchMovie = (movie) => {
@@ -145,6 +172,13 @@ let watchMovie = (movie) => {
     torrent.stream(movie, (movieTorrent) => {
       let torrentId = movieTorrent.magnetURI
       let moviePath = movieTorrent.path + movieTorrent.name
+
+      subtitles.fetchSubtitles(movie.imdb_code, moviePath + '/subtitles.vtt', 'english', () => {
+        /* console.log('got subtitles yay!') */
+        addSubtitles(movie)
+        console.log('added subtitles to video')
+      })
+
       fs.writeFile(moviePath + '/details.json', JSON.stringify(movie, null, 2), (err, data) => {
         if (err) throw err
         console.log('saved movie details for \'' + movie.title + '\'')
@@ -248,27 +282,15 @@ let listSavedMovies = () => {
   })
 }
 
+let getMovieSubtitles = (movie) => {
+  
+}
+
 window.onload = () => {
   movieLib.getSavedMovies((savedMovies) => {
     addMovies(savedMovies)
   })
   // fetchMovies(1, {page: 1, limit: 50, sort_by: 'peers', genre: 'romance'})
-}
-
-let updateMovieData = (movie, dataFile, cb) => {
-  fs.readFile(dataFile, (err, content) => {
-    if (err) {
-      throw err
-      alert(err)
-    }
-    let movies = JSON.parse(content)
-    let foundMovie = false
-    movies.forEach((savedMovie) => {
-      if (savedMovie.id === movie.id) {
-        foundMovie = true
-      }
-    })
-  })
 }
 
 /* movie data logging */
