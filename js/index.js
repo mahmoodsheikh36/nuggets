@@ -320,6 +320,7 @@ let increaseWatchTime = (movie, dataFile, cb) => {
       simpleMovieData.year          = movie.year
       simpleMovieData.genres        = movie.genres
       simpleMovieData.runtime       = movie.runtime
+      simpleMovieData.imdb_code     = movie.imdb_code
       simpleMovieData.sec_watched   = 1
       simpleMovieData.times_played  = 1
       /*
