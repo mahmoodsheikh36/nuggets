@@ -45,6 +45,7 @@ div.title {
 div.movie {
     border: 1px solid black;
     margin-bottom: 0.3em;
+    width: 127px;
 }
 
 .preview_container {
@@ -165,15 +166,19 @@ div.movie {
 }
 
 ::-webkit-scrollbar {
+    background-color: #1d4738;
     width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1d4738;
+    background-color: #2d3738;
+    border-radius: 200px;
+    
 }
  
 ::-webkit-scrollbar-thumb {
     background: #2d7758;
+    border-radius: 200px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

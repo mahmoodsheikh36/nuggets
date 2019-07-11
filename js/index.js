@@ -3,8 +3,10 @@ const fs = require('fs'),
       os = require('os')
 const yts = require('./js/yts.js'),
       torrent = require('./js/torrent.js'),
-      movieLib = require('./js/movie.js'),
-      subtitles = require('./js/subtitles.js')
+      subtitles = require('./js/subtitles.js'),
+      popcorn = require('./js/popcorn.js')
+
+const MOVIES_LOCATION = os.homedir() + '/movies/'
 
 const ALLOW_MOUSE_NAVIGATION = false
 
@@ -41,9 +43,13 @@ let fetchMovies = (pages=1, ytsArgs, cb) => {
     yts.fetchMovies((content, statusCode) => {
       if (statusCode == 200) {
         let movies = JSON.parse(content).data.movies
-        addMovies(movies)
-        ytsArgs.page++
-        fetchMovies(pages - 1, ytsArgs)
+        if (movies) {
+          addMovies(movies)
+          ytsArgs.page++
+          fetchMovies(pages - 1, ytsArgs)
+        } else {
+          console.log('no more movies, fetched as many as possible from yts')
+        }
       } else {
         console.error('status code returned from yts is', statusCode)
       }
@@ -68,12 +74,45 @@ let addMovie = (movie) => {
 
   movieDiv.className = 'movie'
   movieDiv.onclick = () => {
-    previewMovie(movie)
+    previewMovie(movie, true)
   }
 
   // image
   let movieImg = document.createElement('img')
   movieImg.src = movie.medium_cover_image
+  movieDiv.append(movieImg)
+
+  // title
+  let titleDiv = document.createElement('div')
+  titleDiv.innerHTML = movie.title
+  titleDiv.className = 'title'
+  movieDiv.append(titleDiv)
+
+  if (ALLOW_MOUSE_NAVIGATION) {
+    movieDiv.onmouseover = (event) => {
+      setHoveredMovie(movie)
+    }
+  }
+
+  let moviesDiv = document.getElementById('movies')
+  moviesDiv.appendChild(movieDiv)
+}
+
+let addPopcornMovie = (movie) => {
+  movies.push(movie)
+  movie.index = movies.length - 1
+  // main div
+  let movieDiv = document.createElement('div')
+  movie.domElement = movieDiv
+
+  movieDiv.className = 'movie'
+  movieDiv.onclick = () => {
+    previewMovie(movie, true)
+  }
+
+  // image
+  let movieImg = document.createElement('img')
+  movieImg.src = movie.images.poster
   movieDiv.append(movieImg)
 
   // title
@@ -196,11 +235,12 @@ let removeMovieVideo = () => {
     $('#video_container').removeChild($('#video_container video'))
 }
 
-let previewMovie = (movie) => {
+let previewMovie = (movie, updateScrollAmount=false) => {
   if (typeof movie !== 'object')
     return
   removeMovieVideo()
-  scrollAmount = document.documentElement.scrollTop
+  if (updateScrollAmount)
+    scrollAmount = document.documentElement.scrollTop
   removeTrailer()
   removeMovieVideo()
   hide($('#movies'), $('#video_container'))
@@ -282,12 +322,15 @@ let listSavedMovies = () => {
   })
 }
 
-let getMovieSubtitles = (movie) => {
-  
+let showSavedMovies = () => {
+  removeAllMovies()
+  getSavedMovies((savedMovies) => {
+    addMovies(savedMovies)
+  })
 }
 
 window.onload = () => {
-  movieLib.getSavedMovies((savedMovies) => {
+  getSavedMovies((savedMovies) => {
     addMovies(savedMovies)
   })
   // fetchMovies(1, {page: 1, limit: 50, sort_by: 'peers', genre: 'romance'})
@@ -338,10 +381,11 @@ let increaseWatchTime = (movie, dataFile, cb) => {
         alert(err)
       }
       previousMovie = movie
-      cb()
+      /* cb() */
     })
 
   })
+  cb() /* idk if its stupid to not wait for previous call to finish */
 }
 
 let searchMovies = (pattern, movieList=movies) => {
@@ -353,6 +397,96 @@ let searchMovies = (pattern, movieList=movies) => {
       moviesMatched.push(movie)
   }
   relistMovies(moviesMatched)
+}
+
+let getSavedMovies = (cb) => {
+  let savedMovies = []
+  let options = {
+    withFileTypes: true,
+  }
+  fs.readdir(MOVIES_LOCATION, options, (err, dirents) => {
+    if (err) {
+      cosnole.error(err)
+      /* error listing directory = no movies saved */
+      cb([])
+    }
+
+    if (dirents.length == 0)
+      cb([])
+    console.log(dirents.length + ' saved movies found')
+
+    getAllSavedMovieDetails(dirents, dirents.length, savedMovies, () => {
+      cb(savedMovies)
+    })
+
+  })
+
+}
+
+let getAllSavedMovieDetails = (dirents, direntsLength, movieList, cb) => {
+  if (direntsLength < 1) {
+    cb()
+    return
+  }
+  getSavedMovieDetails(dirents[direntsLength - 1].name, (movie) => {
+    if (movie !== null)
+      movieList.push(movie)
+    getAllSavedMovieDetails(dirents, direntsLength - 1, movieList, cb)
+  })
+}
+
+let getSavedMovieDetails = (movieDirName, cb) => {
+  let detailsFile = MOVIES_LOCATION + movieDirName + '/details.json'
+  console.log(detailsFile)
+  fs.readFile(detailsFile, (err, content) => {
+    if (err) {
+      console.error(err)
+      cb(null)
+    }
+    let movie = JSON.parse(content)
+    cb(movie)
+  })
+}
+
+let fetchMovieDetails = (movie, cb) => {
+  yts.fetchMovieDetails((content, statusCode) => {
+    if (statusCode === 200) {
+      let movieDetails = JSON.parse(content).data.movie
+      cb(movieDetails)
+    } else {
+      console.error(`failed to fetch movie details, status Code: ${statusCode}`)
+      cb()
+    }
+  }, {movie_id: movie.id})
+}
+
+let fetchParentalGuide = (movie, cb) => {
+  yts.fetchParentalGuide((content, statusCode) => {
+    let parentalGuide = JSON.parse(content)
+    cb(parentalGuide)
+  }, movie.id)
+}
+
+let fetchUpcomingMovies = (cb) => {
+  yts.fetchUpcomingMovies((content, statusCode) => {
+    if (statusCode === 200) {
+      let upcomingMovies = JSON.parse(content)
+      cb(upcomingMovies)
+    } else {
+      console.error(`failed to fetch upcoming movies, status code: ${statusCode}`)
+      cb()
+    }
+  })
+}
+
+let fetchPopcornMovies = (options) => {
+  popcorn.fetchMovies((err, movies) => {
+    if (err) console.log(err)
+    else
+      for (let i = 0; i < movies.length; ++i) {
+        addPopcornMovie(movies[i])
+      }
+  }, options)
 }
 
 let collectData = () => {
@@ -453,7 +587,7 @@ document.onkeydown = (event) => {
         setHoveredMovie(movies[0])
         break
       }
-      previewMovie(hoveredMovie)
+      previewMovie(hoveredMovie, true)
       break
     case 'G': // g
       document.documentElement.scrollTop = document.documentElement.scrollHeight

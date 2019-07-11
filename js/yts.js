@@ -71,9 +71,42 @@ let fetchMovieDetails = (onResult, {movie_id, with_images, with_cast}={}) => {
   request.request(options, onResult)
 }
 
+
+/* yts doesnt have parental info yet, but the backend is setup for it */
+let fetchParentalGuide = (onResult, movie_id) => {
+  const PARENTAL_GUIDE_BACKEND = '/api/v2/movie_parental_guides.json'
+  const options = {
+    host: 'yts.lt',
+    path: PARENTAL_GUIDE_BACKEND,
+    port: 443,
+    query: {
+      movie_id: movie_id
+    }
+  }
+
+  request.request(options, onResult)
+}
+
+
+let fetchUpcomingMovies = (onResult) => {
+  const UPCOMING_MOVIES_BACKEND = '/api/v2/list_upcoming.json'
+  const options = {
+    host: 'yts.lt',
+    path: UPCOMING_MOVIES_BACKEND,
+    port: 443,
+    query: {
+    },
+  }
+
+  request.request(options, onResult)
+}
+
+
 module.exports = {
   fetchMovies,
   fetchMovieDetails,
+  fetchParentalGuide,
+  fetchUpcomingMovies,
 }
 /*
 fetchMovieDetails((content, statusCode) => {
