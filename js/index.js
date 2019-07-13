@@ -4,7 +4,8 @@ const fs = require('fs'),
 const yts = require('./js/yts.js'),
       torrent = require('./js/torrent.js'),
       subtitles = require('./js/subtitles.js'),
-      popcorn = require('./js/popcorn.js')
+      popcorn = require('./js/popcorn.js'),
+      movieLib = require('./js/movie.js')
 
 const MOVIES_LOCATION = os.homedir() + '/movies/'
 
@@ -37,16 +38,18 @@ let isVisible = (domElement) => {
 
 let fetchMovies = (pages=1, ytsArgs, cb) => {
   if (pages < 1) {
-    if (cb)
-      cb()
+    // if (cb)
+    //   cb()
   } else {
     yts.fetchMovies((content, statusCode) => {
       if (statusCode == 200) {
-        let movies = JSON.parse(content).data.movies
-        if (movies) {
+        let ytsMovies = JSON.parse(content).data.movies
+        if (ytsMovies) {
+          let movies = movieLib.fromYtsMovies(ytsMovies)
           addMovies(movies)
+          cb(ytsArgs.page)
           ytsArgs.page++
-          fetchMovies(pages - 1, ytsArgs)
+          fetchMovies(pages - 1, ytsArgs, cb)
         } else {
           console.log('no more movies, fetched as many as possible from yts')
         }
@@ -59,9 +62,18 @@ let fetchMovies = (pages=1, ytsArgs, cb) => {
 
 let refetchMovies = (pages=1, ytsArgs) => {
   hoveredMovie = undefined
+  let firstPage = ytsArgs.page
   removeAllMovies()
-  fetchMovies(pages, ytsArgs, () => {
-    console.log('refetched movies')
+  fetchMovies(pages, ytsArgs, (page) => {
+    switch(page) {
+    case 1:
+      if (movies.length > 0)
+        setHoveredMovie(movies[0])
+      break
+    case firstPage + pages:
+      console.log('finished refetching movies')
+      break
+    }
   })
 }
 
@@ -75,44 +87,12 @@ let addMovie = (movie) => {
   movieDiv.className = 'movie'
   movieDiv.onclick = () => {
     previewMovie(movie, true)
+    setHoveredMovie(movie)
   }
 
   // image
   let movieImg = document.createElement('img')
-  movieImg.src = movie.medium_cover_image
-  movieDiv.append(movieImg)
-
-  // title
-  let titleDiv = document.createElement('div')
-  titleDiv.innerHTML = movie.title
-  titleDiv.className = 'title'
-  movieDiv.append(titleDiv)
-
-  if (ALLOW_MOUSE_NAVIGATION) {
-    movieDiv.onmouseover = (event) => {
-      setHoveredMovie(movie)
-    }
-  }
-
-  let moviesDiv = document.getElementById('movies')
-  moviesDiv.appendChild(movieDiv)
-}
-
-let addPopcornMovie = (movie) => {
-  movies.push(movie)
-  movie.index = movies.length - 1
-  // main div
-  let movieDiv = document.createElement('div')
-  movie.domElement = movieDiv
-
-  movieDiv.className = 'movie'
-  movieDiv.onclick = () => {
-    previewMovie(movie, true)
-  }
-
-  // image
-  let movieImg = document.createElement('img')
-  movieImg.src = movie.images.poster
+  movieImg.src = movie.coverImage
   movieDiv.append(movieImg)
 
   // title
@@ -177,7 +157,7 @@ let setMovieVideo = (movie) => {
 
 let addSubtitles = (movie) => {
   let subtitles = document.createElement('track')
-  subtitles.src  = getMoviePath(movie) + '/subtitles.vtt'
+  subtitles.src  = movie.path + '/subtitles.vtt'
   subtitles.kind = 'subtitles'
   subtitles.srclang = 'en'
   subtitles.label = 'English'
@@ -196,10 +176,6 @@ let delaySubtitles = (seconds) => {
   console.log(`delayed subtitles by ${seconds} seconds`)
 }
 
-let getMoviePath = (movie) => {
-  return movie.torrent.path + movie.torrent.name
-}
-
 let watchMovie = (movie) => {
   removeMovieVideo()
   if (movie.torrent !== undefined) {
@@ -211,6 +187,7 @@ let watchMovie = (movie) => {
     torrent.stream(movie, (movieTorrent) => {
       let torrentId = movieTorrent.magnetURI
       let moviePath = movieTorrent.path + movieTorrent.name
+      movie.path = moviePath
 
       subtitles.fetchSubtitles(movie.imdb_code, moviePath + '/subtitles.vtt', 'english', () => {
         /* console.log('got subtitles yay!') */
@@ -246,8 +223,8 @@ let previewMovie = (movie, updateScrollAmount=false) => {
   hide($('#movies'), $('#video_container'))
   $('#preview_title').innerHTML = movie.title
   $('#preview_year').innerHTML  = movie.year
-  $('#preview_desc').innerHTML  = movie.description_full
-  $('#preview_image').src       = movie.large_cover_image
+  $('#preview_desc').innerHTML  = movie.desc
+  $('#preview_image').src       = movie.coverImage
 
   let genres_str = 'genres: '
   for (let i = 0; i < movie.genres.length; ++i) {
@@ -265,7 +242,6 @@ let previewMovie = (movie, updateScrollAmount=false) => {
 }
 
 let viewMovieList = () => {
-  removeMovieVideo()
   removeTrailer()
   removeMovieVideo()
   hide($('#video_container'), $('#preview_container'))
@@ -290,10 +266,9 @@ let watchTrailer = (movie) => {
 
   hide($('#video_container'), $('#preview_container'), $('#movies'))
 
-  let ytUrl = 'https://www.youtube.com/embed/' + movie.yt_trailer_code
-  ytUrl += '?autoplay=1'
-
-  ytIframe.src = ytUrl
+  // let ytUrl = movie.trailer
+  // ytUrl += '?autoplay=1'
+  ytIframe.src = movie.trailer + '?autoplay=1'
 
   $('#trailer_container').appendChild(ytIframe)
 
@@ -330,8 +305,11 @@ let showSavedMovies = () => {
 }
 
 window.onload = () => {
-  getSavedMovies((savedMovies) => {
-    addMovies(savedMovies)
+  // getSavedMovies((savedMovies) => {
+  //   addMovies(savedMovies)
+  // })
+  fetchPopcornMovies(20, {page: 1, sort: 'trending'}, (pageFetched) => {
+    console.log(`page ${pageFetched} fetched`)
   })
   // fetchMovies(1, {page: 1, limit: 50, sort_by: 'peers', genre: 'romance'})
 }
@@ -347,32 +325,30 @@ let increaseWatchTime = (movie, dataFile, cb) => {
     let movies = JSON.parse(content)
     let foundMovie = false
     movies.forEach((savedMovie) => {
-      if (savedMovie.id === movie.id) {
+      if (savedMovie.imdbId === movie.imdbId) {
         foundMovie = true
-        savedMovie.sec_watched++
-        if (previousMovie === undefined || movie.id !== previousMovie.id)
-          savedMovie.times_played++
+        savedMovie.secWatched++
+        if (previousMovie === undefined || movie.imdbId !== previousMovie.imdbId)
+          savedMovie.timesPlayed++
       }
     })
 
     if (!foundMovie) {
-      let simpleMovieData = {}
-      simpleMovieData.id            = movie.id
-      simpleMovieData.title         = movie.title
-      simpleMovieData.title_english = movie.title_english
-      simpleMovieData.year          = movie.year
-      simpleMovieData.genres        = movie.genres
-      simpleMovieData.runtime       = movie.runtime
-      simpleMovieData.imdb_code     = movie.imdb_code
-      simpleMovieData.sec_watched   = 1
-      simpleMovieData.times_played  = 1
+      let movieData = {}
+      movieData.imdbId        = movie.imdbId
+      movieData.title         = movie.title
+      movieData.year          = movie.year
+      movieData.genres        = movie.genres
+      movieData.runtime       = movie.runtime
+      movieData.secWatched   = 1
+      movieData.timesPlayed  = 1
       /*
       movieData.cast          = []
       movie.cast.forEach((actor) => {
         movieData.push(actor.name)
       })
       */
-      movies.push(simpleMovieData)
+      movies.push(movieData)
     }
     
     fs.writeFile(dataFile, JSON.stringify(movies, null, 2), (err) => {
@@ -448,7 +424,7 @@ let getSavedMovieDetails = (movieDirName, cb) => {
   })
 }
 
-let fetchMovieDetails = (movie, cb) => {
+let fetchMovieDetails = (movieId, cb) => {
   yts.fetchMovieDetails((content, statusCode) => {
     if (statusCode === 200) {
       let movieDetails = JSON.parse(content).data.movie
@@ -457,7 +433,7 @@ let fetchMovieDetails = (movie, cb) => {
       console.error(`failed to fetch movie details, status Code: ${statusCode}`)
       cb()
     }
-  }, {movie_id: movie.id})
+  }, {movie_id: movieId})
 }
 
 let fetchParentalGuide = (movie, cb) => {
@@ -479,14 +455,27 @@ let fetchUpcomingMovies = (cb) => {
   })
 }
 
-let fetchPopcornMovies = (options) => {
-  popcorn.fetchMovies((err, movies) => {
-    if (err) console.log(err)
-    else
-      for (let i = 0; i < movies.length; ++i) {
-        addPopcornMovie(movies[i])
-      }
+let fetchPopcornMovies = (pages, options, cb) => {
+  if (pages < 1)
+    return
+  popcorn.fetchMovies((err, popcornMovies) => {
+    if (err)
+      console.error(err)
+    else {
+      addMovies(movieLib.fromPopcornMovies(popcornMovies))
+      cb(options.page)
+      options.page++
+      fetchPopcornMovies(pages - 1, options, cb)
+    }
   }, options)
+}
+
+let refetchPopcornMovies = (pages, options, cb) => {
+  hoveredMovie = undefined
+  removeAllMovies()
+  fetchPopcornMovies(pages, options, (pageFetched) => {
+    console.log(`page ${pageFetched} fetched`)
+  })
 }
 
 let collectData = () => {
@@ -596,6 +585,31 @@ document.onkeydown = (event) => {
     case 'g':
       document.documentElement.scrollTop = 0
       setHoveredMovie(movies[0])
+      break
+    case '$':
+      let foundLastInLineMovie = false
+      for (let i = hoveredMovie.index; i < movies.length; ++i) {
+        if (movies[i].domElement.offsetTop > hoveredMovie.domElement.offsetTop) {
+          foundLastInLineMovie = true
+          setHoveredMovie(movies[i - 1])
+          break
+        }
+      }
+      if (!foundLastInLineMovie)
+        setHoveredMovie(movies[movies.length - 1])
+      break
+    case '0':
+    case '^':
+      let foundFirstInLineMovie = false
+      for (let i = hoveredMovie.index; i >= 0; --i) {
+        if (movies[i].domElement.offsetTop < hoveredMovie.domElement.offsetTop) {
+          foundFirstInLineMovie = true
+          setHoveredMovie(movies[i + 1])
+          break
+        }
+      }
+      if (!foundFirstInLineMovie)
+        setHoveredMovie(movies[0])
       break
     case 'Escape':
       break

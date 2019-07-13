@@ -9,14 +9,12 @@ let fetchSubtitles = (imdbId, path, lang, cb) => {
     port: 443
   }
 
-  console.log(request.buildUrl(requestOptions).href)
-
   request.request(requestOptions, (content, statusCode) => {
     if (statusCode !== 200) {
       console.error(`error fetching subtitles, status code: ${statusCode}`)
-      console.log(content)
     } else {
       let subtitlesData = JSON.parse(content)
+      console.log(subtitlesData)
       let desiredSubtitles
       for (let i = 0; i < subtitlesData.length; ++i) {
         if (subtitlesData[i].LanguageName.toLowerCase() === lang.toLowerCase()) {
@@ -40,7 +38,9 @@ let downloadSubtitles = (url, path, cb) => {
     /* content is compressed, we gotta unzip it */
     let zip = AdmZip(buf)
     let foundSubtitles = false
-    zip.getEntries().forEach((entry) => {
+    let zipEntries = zip.getEntries()
+    for (let i = 0; i < zipEntries.length && !foundSubtitles; ++i) {
+      let entry = zipEntries[i]
       if (entry.name.endsWith('.srt')) {
         foundSubtitles = true
         fs.writeFile(path, srt2webvtt(entry.getData().toString()), (err, data) => {
@@ -51,7 +51,7 @@ let downloadSubtitles = (url, path, cb) => {
           cb(true)
         })
       }
-    })
+    }
     if (!foundSubtitles) /* should throw an error or something */
       cb(false)
   })

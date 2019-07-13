@@ -1,0 +1,2428 @@
+[
+    {
+        "_id": "tt0437086",
+        "imdb_id": "tt0437086",
+        "title": "Alita: Battle Angel",
+        "year": "2019",
+        "synopsis": "When Alita awakens with no memory of who she is in a future world she does not recognize, she is taken in by Ido, a compassionate doctor who realizes that somewhere in this abandoned cyborg shell is the heart and soul of a young woman with an extraordinary past.",
+        "runtime": "122",
+        "released": 1550102400,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.96 GB",
+                    "size": 2104533975,
+                    "peer": 10327,
+                    "seed": 19107,
+                    "url": "magnet:?xt=urn:btih:69C470B39C882FC7DA727D22CC61C80E4D2E192B&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.02 GB",
+                    "size": 1095216660,
+                    "peer": 8155,
+                    "seed": 11762,
+                    "url": "magnet:?xt=urn:btih:E6242B6C4F6B0A938DFA95F53321C7FF67CCBF2E&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=w7pYhpJaJW8",
+        "genres": [
+            "action",
+            "science-fiction",
+            "thriller",
+            "adventure"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/xRWht48C2V8XNfzvPehyClOvDni.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/8RKBHHRqOMOLh5qW3sS6TSFTd8h.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/xRWht48C2V8XNfzvPehyClOvDni.jpg"
+        },
+        "rating": {
+            "percentage": 77,
+            "watching": 82,
+            "votes": 6208,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0448115",
+        "imdb_id": "tt0448115",
+        "title": "Shazam!",
+        "year": "2019",
+        "synopsis": "A boy is given the ability to become an adult superhero in times of need with a single magic word.",
+        "runtime": "132",
+        "released": 1554422400,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "2.11 GB",
+                    "size": 2265595249,
+                    "peer": 10151,
+                    "seed": 15811,
+                    "url": "magnet:?xt=urn:btih:97F58867E989E0DA30CFC56522B08A01646F27D1&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.1 GB",
+                    "size": 1181116006,
+                    "peer": 7519,
+                    "seed": 13012,
+                    "url": "magnet:?xt=urn:btih:77FC1E25B1B295D7827022712CB89C994A193427&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=go6GEIrcvFY",
+        "genres": [
+            "superhero",
+            "comedy",
+            "fantasy",
+            "action"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/xnopI5Xtky18MPhK40cZAGAOVeV.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/bi4jh0Kt0uuZGsGJoUUfqmbrjQg.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/xnopI5Xtky18MPhK40cZAGAOVeV.jpg"
+        },
+        "rating": {
+            "percentage": 75,
+            "watching": 55,
+            "votes": 8112,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2274648",
+        "imdb_id": "tt2274648",
+        "title": "Hellboy",
+        "year": "2019",
+        "synopsis": "Hellboy comes to England, where he must defeat Nimue, Merlin's consort and the Blood Queen. But their battle will bring about the end of the world, a fate he desperately tries to turn away.",
+        "runtime": "121",
+        "released": 1555027200,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.95 GB",
+                    "size": 2093796557,
+                    "peer": 4358,
+                    "seed": 12893,
+                    "url": "magnet:?xt=urn:btih:E1F8020C12028A1C9AC791E790FDC53F3F65A3E4&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.02 GB",
+                    "size": 1095216660,
+                    "peer": 5900,
+                    "seed": 9892,
+                    "url": "magnet:?xt=urn:btih:20D154CA4A99FFDEE7FC295908EBBA9C78081B41&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=dt5g5_1cKVk",
+        "genres": [
+            "action",
+            "fantasy",
+            "superhero",
+            "adventure",
+            "horror",
+            "science-fiction"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/hMbP23EkGk6tjEjRZQXhnVAl5fW.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/bk8LyaMqUtaQ9hUShuvFznQYQKR.jpg"
+        },
+        "rating": {
+            "percentage": 62,
+            "watching": 46,
+            "votes": 2034,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt4463894",
+        "imdb_id": "tt4463894",
+        "title": "Shaft",
+        "year": "2019",
+        "synopsis": "JJ, aka John Shaft Jr., may be a cyber security expert with a degree from MIT, but to uncover the truth behind his best friend\u2019s untimely death, he needs an education only his dad can provide. Absent throughout JJ\u2019s youth, the legendary locked-and-loaded John Shaft agrees to help his progeny navigate Harlem\u2019s heroin-infested underbelly.",
+        "runtime": "111",
+        "released": 1560470400,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.79 GB",
+                    "size": 1921997865,
+                    "peer": 3447,
+                    "seed": 4066,
+                    "url": "magnet:?xt=urn:btih:FEF2C34DA6EF9F75E5B97F62CD83AC1F51E691A0&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:6C90FC96B3D54299C102765BE4DBFD612F6026C8&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 4977,
+                    "peer": 3381,
+                    "size": 996461773,
+                    "filesize": "950.3 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=lD41XdWcmbY",
+        "genres": [
+            "action",
+            "crime",
+            "comedy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/kfZqwGuvEBAysAbCsa0QLKoSYR.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/103d4ObBCWbB6PtOOjZ7C1FSpVl.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/kfZqwGuvEBAysAbCsa0QLKoSYR.jpg"
+        },
+        "rating": {
+            "percentage": 74,
+            "watching": 19,
+            "votes": 1616,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt4154664",
+        "imdb_id": "tt4154664",
+        "title": "Captain Marvel",
+        "year": "2019",
+        "synopsis": "The story follows Carol Danvers as she becomes one of the universe\u2019s most powerful heroes when Earth is caught in the middle of a galactic war between two alien races. Set in the 1990s, Captain Marvel is an all-new adventure from a previously unseen period in the history of the Marvel Cinematic Universe.",
+        "runtime": "124",
+        "released": 1552003200,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.98 GB",
+                    "size": 2126008812,
+                    "peer": 19585,
+                    "seed": 22968,
+                    "url": "magnet:?xt=urn:btih:36BD19B9A2F020E6C203F1982B2E45B5E4268046&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:FE6EB05072CFF4F2FC865AC4398C0C1914A2F99C&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 13874,
+                    "peer": 14221,
+                    "size": 1105954079,
+                    "filesize": "1.03 GB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=Z1BCujX3pw8",
+        "genres": [
+            "science-fiction",
+            "action",
+            "adventure",
+            "superhero"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/w2PMyoyLU22YvrGK3smVM9fW1jj.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/AtsgWhDnHTq68L0lLsUrCnM7TjG.jpg"
+        },
+        "rating": {
+            "percentage": 76,
+            "watching": 17,
+            "votes": 15828,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt3861390",
+        "imdb_id": "tt3861390",
+        "title": "Dumbo",
+        "year": "2019",
+        "synopsis": "A young elephant, whose oversized ears enable him to fly, helps save a struggling circus, but when the circus plans a new venture, Dumbo and his friends discover dark secrets beneath its shiny veneer.",
+        "runtime": "112",
+        "released": 1553817600,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.79 GB",
+                    "size": 1921997865,
+                    "peer": 3826,
+                    "seed": 9897,
+                    "url": "magnet:?xt=urn:btih:542AFF6B01A9132D8EC7DA14382A8F429E62F77F&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:0A2B96EFA88467632F5C879AC40CA2C98400D8F9&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 6868,
+                    "peer": 2779,
+                    "size": 999964017,
+                    "filesize": "953.64 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=7NiYVoqBt-8",
+        "genres": [
+            "family",
+            "adventure",
+            "fantasy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/sAPmEfr0tBqBjUizje2yCiwj9Gv.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/5tFt6iuGnKapHl5tw0X0cKcnuVo.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/sAPmEfr0tBqBjUizje2yCiwj9Gv.jpg"
+        },
+        "rating": {
+            "percentage": 72,
+            "watching": 13,
+            "votes": 2439,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6348138",
+        "imdb_id": "tt6348138",
+        "title": "Missing Link",
+        "year": "2019",
+        "synopsis": "The charismatic Sir Lionel Frost considers himself to be the world's foremost investigator of myths and monsters. Trouble is, none of his small-minded, high-society peers seems to recognize this. Hoping to finally gain acceptance from these fellow adventurers, Sir Lionel travels to the Pacific Northwest to prove the existence of a legendary creature known as the missing link.",
+        "runtime": "95",
+        "released": 1555027200,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:6E81637180A5952A0AA145DD9D1BC3E8D1851A4A&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 1653,
+                    "peer": 629,
+                    "size": 1621350154,
+                    "filesize": "1.51 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "806.15 MB",
+                    "size": 845309542,
+                    "peer": 716,
+                    "seed": 1753,
+                    "url": "magnet:?xt=urn:btih:D0EB7CA0F922AA1DF8270A251DE929F0B527EEBE&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=vM5VC7nCv_Y",
+        "genres": [
+            "animation",
+            "comedy",
+            "adventure",
+            "fantasy",
+            "family"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/gEkKHiiQRVUSX15Iwo8VFydXrtu.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/1PFUuf7OfUSmJMtG7wWXH0jXYeA.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/gEkKHiiQRVUSX15Iwo8VFydXrtu.jpg"
+        },
+        "rating": {
+            "percentage": 71,
+            "watching": 13,
+            "votes": 193,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt7558302",
+        "imdb_id": "tt7558302",
+        "title": "Lying and Stealing",
+        "year": "2019",
+        "synopsis": "Hoping to leave his criminal lifestyle behind him, a successful art thief teams up with a sexy con woman to pull off the ultimate heist and set himself free.",
+        "runtime": "90",
+        "released": 1562889600,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.61 GB",
+                    "size": 1728724337,
+                    "peer": 1190,
+                    "seed": 1588,
+                    "url": "magnet:?xt=urn:btih:2286EC80ACD82A2C4364A81697D2CDFA3FFC527F&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "855.69 MB",
+                    "size": 897255997,
+                    "peer": 1702,
+                    "seed": 2011,
+                    "url": "magnet:?xt=urn:btih:C348ED478FD58C2E967BD04CB2BA09F9D3F44F10&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=mKXa10VDQj4",
+        "genres": [
+            "drama",
+            "crime"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/4YrVrPfMEqtFsLmN4HdzERjbveo.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/1cCt2xJfrXh4xcUUPiVX3fIhO4R.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/4YrVrPfMEqtFsLmN4HdzERjbveo.jpg"
+        },
+        "rating": {
+            "percentage": 64,
+            "watching": 11,
+            "votes": 20,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6823368",
+        "imdb_id": "tt6823368",
+        "title": "Glass",
+        "year": "2019",
+        "synopsis": "In a series of escalating encounters, former security guard David Dunn uses his supernatural abilities to track Kevin Wendell Crumb, a disturbed man who has twenty-four personalities. Meanwhile, the shadowy presence of Elijah Price emerges as an orchestrator who holds secrets critical to both men.",
+        "runtime": "129",
+        "released": 1547769600,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:3A21339534A738627588394BBA97A916DAF79AC9&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 16579,
+                    "peer": 10336,
+                    "size": 2222645576,
+                    "filesize": "2.07 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.08 GB",
+                    "size": 1159641170,
+                    "peer": 9753,
+                    "seed": 13027,
+                    "url": "magnet:?xt=urn:btih:88986D0AF1E33433D9CA970F575BBF1ED0D20CE1&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=95ghQs5AmNk",
+        "genres": [
+            "thriller",
+            "superhero",
+            "drama",
+            "science-fiction"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/rL1ITQuX0lmSNPu52pRRHUyim5N.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/svIDTNUoajS8dLEo7EosxvyAsgJ.jpg"
+        },
+        "rating": {
+            "percentage": 71,
+            "watching": 11,
+            "votes": 9327,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0435761",
+        "imdb_id": "tt0435761",
+        "title": "Toy Story 3",
+        "year": "2010",
+        "synopsis": "Woody, Buzz, and the rest of Andy's toys haven't been played with in years. With Andy about to go to college, the gang find themselves accidentally left at a nefarious day care center. The toys must band together to escape and return home to Andy.",
+        "runtime": "103",
+        "released": 1276732800,
+        "trailer": "http://youtube.com/watch?v=TNMpa5yBf5o",
+        "certification": "G",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.40 GB",
+                    "size": 1503238554,
+                    "peer": 155,
+                    "seed": 1345,
+                    "url": "magnet:?xt=urn:btih:63EF65AC303B350E5C5C230C03066DCCB3A45E64&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "651.29 MB",
+                    "size": 682927063,
+                    "peer": 37,
+                    "seed": 92,
+                    "url": "magnet:?xt=urn:btih:E1289DD3242CA19AB37053BF0310F2E61DF34530&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "genres": [
+            "animation",
+            "comedy",
+            "family"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/mMltbSxwEdNE4Cv8QYLpzkHWTDo.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/y2qAjM37QgatWeG84DDtwsZuMW.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/mMltbSxwEdNE4Cv8QYLpzkHWTDo.jpg"
+        },
+        "rating": {
+            "percentage": 82,
+            "watching": 11,
+            "votes": 21394,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6772804",
+        "imdb_id": "tt6772804",
+        "title": "Escape Plan: The Extractors",
+        "year": "2019",
+        "synopsis": "After security expert Ray Breslin is hired to rescue the kidnapped daughter of a Hong Kong tech mogul from a formidable Latvian prison, Breslin's girlfriend is also captured. Now he and his team must pull off a deadly rescue mission to confront their sadistic foe and save the hostages before time runs out.",
+        "runtime": "97",
+        "released": 1560988800,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:9E28E086C43D15E0A7C126CA89406B427E755DFD&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 6974,
+                    "peer": 2797,
+                    "size": 802663956,
+                    "filesize": "765.48 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=MFWf4o9X_x8",
+        "genres": [
+            "action",
+            "thriller"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/9V5fl1mGgVZzOYod0Jq2hyRlzEY.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/ygWKYTu7OnZKF9H5NsgjL9iURGV.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/9V5fl1mGgVZzOYod0Jq2hyRlzEY.jpg"
+        },
+        "rating": {
+            "percentage": 63,
+            "watching": 10,
+            "votes": 651,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2294629",
+        "imdb_id": "tt2294629",
+        "title": "Frozen",
+        "year": "2013",
+        "synopsis": "Young princess Anna of Arendelle dreams about finding true love at her sister Elsa\u2019s coronation. Fate takes her on a dangerous journey in an attempt to end the eternal winter that has fallen over the kingdom. She's accompanied by ice delivery man Kristoff, his reindeer Sven, and snowman Olaf. On an adventure where she will find out what friendship, courage, family, and true love really means.",
+        "runtime": "102",
+        "released": 1385510400,
+        "trailer": "http://youtube.com/watch?v=TbQm5doF_Uc",
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.63 GB",
+                    "size": 1750199173,
+                    "peer": 155,
+                    "seed": 755,
+                    "url": "magnet:?xt=urn:btih:4956A4E976EA948025C3C3554567CA2820F65F64&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "805.35 MB",
+                    "size": 844470682,
+                    "peer": 112,
+                    "seed": 950,
+                    "url": "magnet:?xt=urn:btih:25B4CD46E389E96F80EE42E418CD89D3A65ECD66&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "genres": [
+            "adventure",
+            "animation",
+            "family",
+            "musical"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/eFnGmj63QPUpK7QUWSOUhypIQOT.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/cN9Nbwh66TRcj2gBE8cSEZulsx3.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/eFnGmj63QPUpK7QUWSOUhypIQOT.jpg"
+        },
+        "rating": {
+            "percentage": 76,
+            "watching": 9,
+            "votes": 39767,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0837563",
+        "imdb_id": "tt0837563",
+        "title": "Pet Sematary",
+        "year": "2019",
+        "synopsis": "Dr. Louis Creed and his wife, Rachel, relocate from Boston to rural Maine with their two young children. The couple soon discover a mysterious burial ground hidden deep in the woods near their new home. When tragedy strikes, Louis turns to his neighbour Jud Crandall, setting off a perilous chain reaction that unleashes an unspeakable evil with horrific consequences.",
+        "runtime": "101",
+        "released": 1554422400,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:3047C35413ABD97E636C8073E23B65592A33EDB7&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 5366,
+                    "peer": 2623,
+                    "size": 1750199173,
+                    "filesize": "1.63 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:ACB7F87D00A387D6145A9B7DB31584B4C213A210&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 4676,
+                    "peer": 1873,
+                    "size": 912093348,
+                    "filesize": "869.84 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=VllcgXSIJkE",
+        "genres": [
+            "horror",
+            "thriller",
+            "mystery"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/7SPhr7Qj39vbnfF9O2qHRYaKHAL.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/n2aX63BmW7zIKgKJ58e6rKlSsdi.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/7SPhr7Qj39vbnfF9O2qHRYaKHAL.jpg"
+        },
+        "rating": {
+            "percentage": 64,
+            "watching": 9,
+            "votes": 2907,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt4154756",
+        "imdb_id": "tt4154756",
+        "title": "Avengers: Infinity War",
+        "year": "2018",
+        "synopsis": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+        "runtime": "149",
+        "released": 1524787200,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:7643D0625DED0A5FC967B37A9D6AF6990236C180&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 33127,
+                    "peer": 27520,
+                    "size": 2566242959,
+                    "filesize": "2.39 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:BCEB706EA32EDD855FCA4426DF8A7831F53CC3EE&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 19610,
+                    "peer": 23647,
+                    "size": 1331439862,
+                    "filesize": "1.24 GB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=6ZfuNTqbHE8",
+        "genres": [
+            "action",
+            "adventure",
+            "superhero",
+            "fantasy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg"
+        },
+        "rating": {
+            "percentage": 85,
+            "watching": 9,
+            "votes": 32475,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2499472",
+        "imdb_id": "tt2499472",
+        "title": "Point Blank",
+        "year": "2019",
+        "synopsis": "A nurse is forced to spring a wounded murder suspect from the hospital when the man\u2019s brother kidnaps his pregnant wife and wants to make a trade.",
+        "runtime": "86",
+        "released": 1562889600,
+        "certification": null,
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.39 GB",
+                    "size": 1492501135,
+                    "peer": 652,
+                    "seed": 948,
+                    "url": "magnet:?xt=urn:btih:5A507BCC2528AC79301FA5052CDD88EDECC9331B&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "738.8 MB",
+                    "size": 774687949,
+                    "peer": 1029,
+                    "seed": 1583,
+                    "url": "magnet:?xt=urn:btih:0152AE07533F738A0B987A8BD717BF8452219B4D&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=hIMJ0_S-x40",
+        "genres": [
+            "crime",
+            "action",
+            "thriller"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/weAvkxl0dnPevIKD8fwHjiOi6tc.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/8y5GzlWfJaJaW2cp5Y8QtiZnvfQ.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/weAvkxl0dnPevIKD8fwHjiOi6tc.jpg"
+        },
+        "rating": {
+            "percentage": 64,
+            "watching": 7,
+            "votes": 22,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt5848272",
+        "imdb_id": "tt5848272",
+        "title": "Ralph Breaks the Internet",
+        "year": "2018",
+        "synopsis": "Video game bad guy Ralph and fellow misfit Vanellope von Schweetz must risk it all by traveling to the World Wide Web in search of a replacement part to save Vanellope's video game, \"Sugar Rush.\" In way over their heads, Ralph and Vanellope rely on the citizens of the internet -- the netizens -- to help navigate their way, including an entrepreneur named Yesss, who is the head algorithm and the heart and soul of trend-making site BuzzzTube.",
+        "runtime": "112",
+        "released": 1542758400,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:4EEEC8CFAE2F715B707231A4C022D3D545A6FA53&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 11555,
+                    "peer": 3611,
+                    "size": 1943472701,
+                    "filesize": "1.81 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:1D7C704F5A4C3FA67BAEDBF96BC3E2F4E8634DD4&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 9236,
+                    "peer": 5628,
+                    "size": 1006171587,
+                    "filesize": "959.56 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=_BcYBFC6zfY",
+        "genres": [
+            "animation",
+            "family",
+            "comedy",
+            "adventure"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/qEnH5meR381iMpmCumAIMswcQw2.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/88poTBTafMXaz73vYi3c74g0y2k.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/qEnH5meR381iMpmCumAIMswcQw2.jpg"
+        },
+        "rating": {
+            "percentage": 76,
+            "watching": 7,
+            "votes": 8514,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt3521164",
+        "imdb_id": "tt3521164",
+        "title": "Moana",
+        "year": "2016",
+        "synopsis": "In Ancient Polynesia, when a terrible curse incurred by Maui reaches an impetuous Chieftain's daughter's island, she answers the Ocean's call to seek out the demigod to set things right.",
+        "runtime": "107",
+        "released": 1479859200,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:635F4FE104291989E433EF7100C33F6106E85007&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 12298,
+                    "peer": 10261,
+                    "size": 1750199173,
+                    "filesize": "1.63 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:749E77BBFEBD97E689C132E3B663BB89425476DC&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 12035,
+                    "peer": 11491,
+                    "size": 827934638,
+                    "filesize": "789.58 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=C6PbWhWGUrY",
+        "genres": [
+            "family",
+            "adventure",
+            "comedy",
+            "animation",
+            "musical"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/z4x0Bp48ar3Mda8KiPD1vwSY3D8.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/1qGzqGUd1pa05aqYXGSbLkiBlLB.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/z4x0Bp48ar3Mda8KiPD1vwSY3D8.jpg"
+        },
+        "rating": {
+            "percentage": 80,
+            "watching": 7,
+            "votes": 41142,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt4126476",
+        "imdb_id": "tt4126476",
+        "title": "After",
+        "year": "2019",
+        "synopsis": "Tessa Young is a dedicated student, dutiful daughter and loyal girlfriend to her high school sweetheart. Entering her first semester of college, Tessa's guarded world opens up when she meets Hardin Scott, a mysterious and brooding rebel who makes her question all she thought she knew about herself -- and what she wants out of life.",
+        "runtime": "106",
+        "released": 1555027200,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:CE58C3D4917225559C5E3B2F1C208054D294A204&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 1387,
+                    "peer": 982,
+                    "size": 1825361101,
+                    "filesize": "1.7 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "908.67 MB",
+                    "size": 952809554,
+                    "peer": 1747,
+                    "seed": 2621,
+                    "url": "magnet:?xt=urn:btih:D91FE21E204B4D06C6879F9158B571EF5E37ED73&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=2ZAdcWHuCmY",
+        "genres": [
+            "drama",
+            "romance"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/u3B2YKUjWABcxXZ6Nm9h10hLUbh.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/997ToEZvF2Obp9zNZbY5ELVnmrW.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/u3B2YKUjWABcxXZ6Nm9h10hLUbh.jpg"
+        },
+        "rating": {
+            "percentage": 66,
+            "watching": 7,
+            "votes": 719,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6472976",
+        "imdb_id": "tt6472976",
+        "title": "Five Feet Apart",
+        "year": "2019",
+        "synopsis": "Seventeen-year-old Stella spends most of her time in the hospital as a cystic fibrosis patient. Her life is full of routines, boundaries and self-control -- all of which get put to the test when she meets Will, an impossibly charming teen who has the same illness. There's an instant flirtation, though restrictions dictate that they must maintain a safe distance between them. As their connection intensifies, so does the temptation to throw the rules out the window and embrace that attraction.",
+        "runtime": "116",
+        "released": 1552608000,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.85 GB",
+                    "size": 1986422374,
+                    "peer": 1489,
+                    "seed": 2254,
+                    "url": "magnet:?xt=urn:btih:DBE74C2EF8C14780C622C5C2CF932FC34AA00228&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:AC55DC7AC2C74F83BE1EC1B2FD96FFEDDF087212&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 3232,
+                    "peer": 2199,
+                    "size": 1031117210,
+                    "filesize": "983.35 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=Kwg07npuJhw",
+        "genres": [
+            "romance",
+            "drama"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/kreTuJBkUjVWePRfhHZuYfhNE1T.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/d7wa3VpUpKDQ7GG9EMw8zSJCFoI.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/kreTuJBkUjVWePRfhHZuYfhNE1T.jpg"
+        },
+        "rating": {
+            "percentage": 81,
+            "watching": 6,
+            "votes": 1112,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6966692",
+        "imdb_id": "tt6966692",
+        "title": "Green Book",
+        "year": "2018",
+        "synopsis": "Tony Lip, a bouncer in 1962, is hired to drive pianist Don Shirley on a tour through the Deep South in the days when African Americans, forced to find alternate accommodations and services due to segregation laws below the Mason-Dixon Line, relied on a guide called The Negro Motorist Green Book.",
+        "runtime": "130",
+        "released": 1542758400,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "2.07 GB",
+                    "size": 2222645576,
+                    "peer": 2810,
+                    "seed": 5363,
+                    "url": "magnet:?xt=urn:btih:A7379B41302EEFF78B7E46EBB25B9D6F2FB572A0&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.07 GB",
+                    "size": 1148903752,
+                    "peer": 2085,
+                    "seed": 3494,
+                    "url": "magnet:?xt=urn:btih:F7220FFA5AB04725BDE94AC9F9C1C14C70686D71&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=QkZxoko_HC0",
+        "genres": [
+            "drama",
+            "comedy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/78PjwaykLY2QqhMfWRDvmfbC6EV.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/7BsvSuDQuoqhWmU2fL7W2GOcZHU.jpg"
+        },
+        "rating": {
+            "percentage": 84,
+            "watching": 6,
+            "votes": 8579,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt1727824",
+        "imdb_id": "tt1727824",
+        "title": "Bohemian Rhapsody",
+        "year": "2018",
+        "synopsis": "Singer Freddie Mercury, guitarist Brian May, drummer Roger Taylor and bass guitarist John Deacon take the music world by storm when they form the rock 'n' roll band Queen in 1970. Hit songs become instant classics. When Mercury's increasingly wild lifestyle starts to spiral out of control, Queen soon faces its greatest challenge yet \u2013 finding a way to keep the band together amid the success and excess.",
+        "runtime": "135",
+        "released": 1541116800,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "2.16 GB",
+                    "size": 2319282340,
+                    "peer": 5094,
+                    "seed": 13797,
+                    "url": "magnet:?xt=urn:btih:E99CAC0ADD8DECF33B48CCDB96F700209EB675D9&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.12 GB",
+                    "size": 1202590843,
+                    "peer": 4393,
+                    "seed": 12018,
+                    "url": "magnet:?xt=urn:btih:3993E814F34CA1525077ACCFE72D9A0BDD8F1848&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=mP0VHJYFOAU",
+        "genres": [
+            "drama",
+            "music"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/xcaSYLBhmDzJ6P14bcKe0KTh3QV.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/lHu1wtNaczFPGFDTrjCSzeLPTKN.jpg"
+        },
+        "rating": {
+            "percentage": 83,
+            "watching": 6,
+            "votes": 16613,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2250912",
+        "imdb_id": "tt2250912",
+        "title": "Spider-Man: Homecoming",
+        "year": "2017",
+        "synopsis": "Following the events of Captain America: Civil War, Peter Parker, with the help of his mentor Tony Stark, tries to balance his life as an ordinary high school student in Queens, New York City, with fighting crime as his superhero alter ego Spider-Man as a new threat, the Vulture, emerges.",
+        "runtime": "133",
+        "released": 1499385600,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:4415109A20908D55CD42EAF24DF9AAF89F7B0F7B&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 16124,
+                    "peer": 20161,
+                    "size": 2179695903,
+                    "filesize": "2.03 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "985.23 MB",
+                    "size": 1033088532,
+                    "peer": 14080,
+                    "seed": 13608,
+                    "url": "magnet:?xt=urn:btih:D64DB6C8AEAE8D2AC53E88B83DE8C54FEDC45317&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=rk-dF1lIbIg",
+        "genres": [
+            "action",
+            "adventure",
+            "science-fiction",
+            "superhero",
+            "drama"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/kY2c7wKgOfQjvbqe7yVzLTYkxJO.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/vc8bCGjdVp0UbMNLzHnHSLRbBWQ.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/kY2c7wKgOfQjvbqe7yVzLTYkxJO.jpg"
+        },
+        "rating": {
+            "percentage": 77,
+            "watching": 6,
+            "votes": 37946,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt8085790",
+        "imdb_id": "tt8085790",
+        "title": "Little",
+        "year": "2019",
+        "synopsis": "A woman receives the chance to relive the life of her younger self, at a point in her life when the pressures of adulthood become too much for her to bear.",
+        "runtime": "108",
+        "released": 1555027200,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.73 GB",
+                    "size": 1857573356,
+                    "peer": 883,
+                    "seed": 1514,
+                    "url": "magnet:?xt=urn:btih:E4E85A673C5D252B4263470AD974C2843DE7F9E7&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "917.11 MB",
+                    "size": 961659535,
+                    "peer": 1355,
+                    "seed": 2313,
+                    "url": "magnet:?xt=urn:btih:4783D05CB63BCFB5701E0B4410A512E1652AF617&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=Qz65no3WnJk",
+        "genres": [
+            "comedy",
+            "fantasy",
+            "romance"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/4MDB6jJl3U7xK1Gw64zIqt9pQA4.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/tmM78qRhpg0i2Cky8Q8hXKASOXY.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/4MDB6jJl3U7xK1Gw64zIqt9pQA4.jpg"
+        },
+        "rating": {
+            "percentage": 65,
+            "watching": 6,
+            "votes": 694,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt4633694",
+        "imdb_id": "tt4633694",
+        "title": "Spider-Man: Into the Spider-Verse",
+        "year": "2018",
+        "synopsis": "Miles Morales is juggling his life between being a high school student and being a spider-man. When Wilson \"Kingpin\" Fisk uses a super collider, others from across the Spider-Verse are transported to this dimension.",
+        "runtime": "117",
+        "released": 1544745600,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.87 GB",
+                    "size": 2007897211,
+                    "peer": 4296,
+                    "seed": 16669,
+                    "url": "magnet:?xt=urn:btih:A753EA13F243EF9C4006D103DCBDBC7CABAD8A01&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "995.38 MB",
+                    "size": 1043731579,
+                    "peer": 5629,
+                    "seed": 12260,
+                    "url": "magnet:?xt=urn:btih:E70B6A744044DD0CAAA33335F4B620DBC47018CB&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=g4Hbz2jLxvQ",
+        "genres": [
+            "action",
+            "adventure",
+            "animation",
+            "science-fiction",
+            "superhero",
+            "comedy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/uUiId6cG32JSRI6RyBQSvQtLjz2.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/iiZZdoQBEYBv6id8su7ImL0oCbD.jpg"
+        },
+        "rating": {
+            "percentage": 87,
+            "watching": 6,
+            "votes": 13786,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt3501632",
+        "imdb_id": "tt3501632",
+        "title": "Thor: Ragnarok",
+        "year": "2017",
+        "synopsis": "Thor is imprisoned on the other side of the universe and finds himself in a race against time to get back to Asgard to stop Ragnarok, the destruction of his home-world and the end of Asgardian civilization, at the hands of an all-powerful new threat, the ruthless Hela.",
+        "runtime": "131",
+        "released": 1509667200,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.98 GB",
+                    "size": 2126008812,
+                    "peer": 15701,
+                    "seed": 17073,
+                    "url": "magnet:?xt=urn:btih:2037B2296417B5D6D3B89DC7A288255943406CF7&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "954.46 MB",
+                    "size": 1000823849,
+                    "peer": 18138,
+                    "seed": 13351,
+                    "url": "magnet:?xt=urn:btih:22E5CD13732B5F6A3B3732A7603B002EF9BA61F3&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=ue80QwXMRHg",
+        "genres": [
+            "action",
+            "adventure",
+            "superhero",
+            "comedy",
+            "fantasy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/8hnNdUFlUkjPWxKDyiE4Kn8h7Q5.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/kaIfm5ryEOwYg8mLbq8HkPuM1Fo.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/8hnNdUFlUkjPWxKDyiE4Kn8h7Q5.jpg"
+        },
+        "rating": {
+            "percentage": 80,
+            "watching": 6,
+            "votes": 33184,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0103639",
+        "imdb_id": "tt0103639",
+        "title": "Aladdin",
+        "year": "1992",
+        "synopsis": "Princess Jasmine grows tired of being forced to remain in the palace, so she sneaks out into the marketplace, in disguise, where she meets street-urchin Aladdin.  The couple falls in love, although Jasmine may only marry a prince.  After being thrown in jail, Aladdin becomes embroiled in a plot to find a mysterious lamp, with which the evil Jafar hopes to rule the land.",
+        "runtime": "90",
+        "released": 722649600,
+        "trailer": "http://youtube.com/watch?v=gWLa6y7Z2TE",
+        "certification": "G",
+        "torrents": {
+            "en": {
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "650.24 MB",
+                    "size": 681826058,
+                    "peer": 238,
+                    "seed": 1536,
+                    "url": "magnet:?xt=urn:btih:064C9EB09D5F2580AB45F1B79C7F3A63A1B306C0&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "genres": [
+            "adventure",
+            "animation",
+            "fantasy",
+            "romance",
+            "family",
+            "musical"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/3BUmvNKdPLxraqYRyniixn34UjN.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/5OeY4U2rzePxWq2rkqMajUx2gz7.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/3BUmvNKdPLxraqYRyniixn34UjN.jpg"
+        },
+        "rating": {
+            "percentage": 81,
+            "watching": 6,
+            "votes": 17650,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0198781",
+        "imdb_id": "tt0198781",
+        "title": "Monsters, Inc.",
+        "year": "2001",
+        "synopsis": "James Sullivan and Mike Wazowski are monsters, they earn their living scaring children and are the best in the business... even though they're more afraid of the children than they are of them. When a child accidentally enters their world, James and Mike suddenly find that kids are not to be afraid of and they uncover a conspiracy that could threaten all children across the world.",
+        "runtime": "92",
+        "released": 1004572800,
+        "trailer": "http://youtube.com/watch?v=8IBNZ6O2kMk",
+        "certification": "G",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.45 GB",
+                    "size": 1556925645,
+                    "peer": 34,
+                    "seed": 225,
+                    "url": "magnet:?xt=urn:btih:D67281864031E5012B056C32EBDC6F9E33C42A44&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "601.68 MB",
+                    "size": 630907208,
+                    "peer": 15,
+                    "seed": 170,
+                    "url": "magnet:?xt=urn:btih:455240895FAF3D54ED89165CBCF0AA8D745E263D&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "genres": [
+            "animation",
+            "comedy",
+            "family"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/93Y9BGx8blzmZOPSoivkFfaifqU.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/wJOHzjTDhnEUyP0Q8gyp6ggvL4A.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/93Y9BGx8blzmZOPSoivkFfaifqU.jpg"
+        },
+        "rating": {
+            "percentage": 82,
+            "watching": 6,
+            "votes": 27496,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6857112",
+        "imdb_id": "tt6857112",
+        "title": "Us",
+        "year": "2019",
+        "synopsis": "Husband and wife Gabe and Adelaide Wilson take their kids to their beach house expecting to unplug and unwind with friends. But as night descends, their serenity turns to tension and chaos when some shocking visitors arrive uninvited.",
+        "runtime": "116",
+        "released": 1553212800,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:9F1BAD7BE934A423EA53832AA498903F0AD5EF20&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 9994,
+                    "peer": 4596,
+                    "size": 2007897211,
+                    "filesize": "1.87 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "996.19 MB",
+                    "size": 1044580925,
+                    "peer": 2766,
+                    "seed": 7241,
+                    "url": "magnet:?xt=urn:btih:70B2976DF8AFBC7EBA95CDB979A8498CDAC250BC&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=hNCmb-4oXJA",
+        "genres": [
+            "thriller",
+            "horror"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/Z020zFirgLav9IckjYTmjyEwX8.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/6BDZOPnZwcouwBO1dIEI0QGQeLv.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/Z020zFirgLav9IckjYTmjyEwX8.jpg"
+        },
+        "rating": {
+            "percentage": 71,
+            "watching": 5,
+            "votes": 5319,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt5886046",
+        "imdb_id": "tt5886046",
+        "title": "Escape Room",
+        "year": "2019",
+        "synopsis": "Six strangers find themselves in circumstances beyond their control, and must use their wits to survive.",
+        "runtime": "99",
+        "released": 1546560000,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:5240E3972F352A558E8785872393110631FA7507&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 9391,
+                    "peer": 3050,
+                    "size": 1675037245,
+                    "filesize": "1.56 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:225B091E77BF749A16CC39AD711A1E6B33C8CF69&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 9941,
+                    "peer": 3859,
+                    "size": 851569541,
+                    "filesize": "812.12 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=6dSKUoV0SNI",
+        "genres": [
+            "thriller",
+            "action",
+            "horror",
+            "science-fiction"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/15AlGTlaZa3W2zmIL4ehnCh8Xe0.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/mWLljCmpqlcYQh7uh51BBMwCZwN.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/15AlGTlaZa3W2zmIL4ehnCh8Xe0.jpg"
+        },
+        "rating": {
+            "percentage": 69,
+            "watching": 5,
+            "votes": 4118,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt1618434",
+        "imdb_id": "tt1618434",
+        "title": "Murder Mystery",
+        "year": "2019",
+        "synopsis": "After attending a gathering on a billionaire's yacht during a European vacation, a New York cop and his wife become prime suspects when he's murdered.",
+        "runtime": "97",
+        "released": 1560470400,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:8C730517FD5FFBBEB520FC0FB615216B959F1C48&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 2104,
+                    "peer": 1760,
+                    "size": 1675037245,
+                    "filesize": "1.56 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:71BBDE279FF0A509F33432597A9FF2DA5824721F&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 3056,
+                    "peer": 2218,
+                    "size": 866857779,
+                    "filesize": "826.7 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=5YEVQDr2f3Q",
+        "genres": [
+            "comedy",
+            "crime",
+            "mystery",
+            "action"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/bSMSO9xupd4R4vwTPqigHn2quLN.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/qeFO3u2IqbAeIT1Xgo6POqYbCaQ.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/bSMSO9xupd4R4vwTPqigHn2quLN.jpg"
+        },
+        "rating": {
+            "percentage": 67,
+            "watching": 5,
+            "votes": 2406,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt4701182",
+        "imdb_id": "tt4701182",
+        "title": "Bumblebee",
+        "year": "2018",
+        "synopsis": "On the run in the year 1987, Bumblebee finds refuge in a junkyard in a small Californian beach town. Charlie, on the cusp of turning 18 and trying to find her place in the world, discovers Bumblebee, battle-scarred and broken.  When Charlie revives him, she quickly learns this is no ordinary yellow VW bug.",
+        "runtime": "114",
+        "released": 1545350400,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.82 GB",
+                    "size": 1954210120,
+                    "peer": 10780,
+                    "seed": 15412,
+                    "url": "magnet:?xt=urn:btih:45C34A51DDE7C45429599339BACAF60C15E86B1C&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "973.61 MB",
+                    "size": 1020904079,
+                    "peer": 3973,
+                    "seed": 9353,
+                    "url": "magnet:?xt=urn:btih:CDC38FBC27145C3165C13A41489808CAA6BAC56C&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=fAIX12F6958",
+        "genres": [
+            "science-fiction",
+            "action",
+            "adventure"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/fw02ONlDhrYjTSZV8XO6hhU3ds3.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/wtZj5nn6hVwgakPdg6y6gm3eFXU.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/fw02ONlDhrYjTSZV8XO6hhU3ds3.jpg"
+        },
+        "rating": {
+            "percentage": 74,
+            "watching": 5,
+            "votes": 8378,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2911666",
+        "imdb_id": "tt2911666",
+        "title": "John Wick",
+        "year": "2014",
+        "synopsis": "Ex-hitman John Wick comes out of retirement to track down the gangsters that took everything from him.",
+        "runtime": "101",
+        "released": 1414108800,
+        "trailer": "http://youtube.com/watch?v=2AUmvWm5ZDQ",
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.54 GB",
+                    "size": 1653562409,
+                    "peer": 532,
+                    "seed": 1965,
+                    "url": "magnet:?xt=urn:btih:0988A8FEA9D4949574A32918565E04E677BBAB5D&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "748.64 MB",
+                    "size": 785005937,
+                    "peer": 489,
+                    "seed": 1682,
+                    "url": "magnet:?xt=urn:btih:75329C300B952E843E071CD2603BB5960C171ACF&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "genres": [
+            "action",
+            "thriller"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/b9uYMMbm87IBFOq59pppvkkkgNg.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/mFb0ygcue4ITixDkdr7wm1Tdarx.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/b9uYMMbm87IBFOq59pppvkkkgNg.jpg"
+        },
+        "rating": {
+            "percentage": 79,
+            "watching": 5,
+            "votes": 32785,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6292852",
+        "imdb_id": "tt6292852",
+        "title": "I Am Mother",
+        "year": "2019",
+        "synopsis": "A teenage girl is raised underground by a robot \"Mother\", designed to repopulate the earth following an extinction event. But their unique bond is threatened when an inexplicable stranger arrives with alarming news.",
+        "runtime": "114",
+        "released": 1559865600,
+        "certification": null,
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:1E251ECED539474B7F75C339ECBFB95DFDFB3AFD&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 1794,
+                    "peer": 1167,
+                    "size": 1954210120,
+                    "filesize": "1.82 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:6C5246B026084C463C8BB040361BF69D48D6D241&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 2208,
+                    "peer": 1696,
+                    "size": 1021784883,
+                    "filesize": "974.45 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=N5BKctcZxrM",
+        "genres": [
+            "thriller",
+            "science-fiction"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/eItrj5GcjvCI3oD3bIcz1A2IL9t.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/kmPnDn9mbjD9Vzn1FTclNiSHGNa.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/eItrj5GcjvCI3oD3bIcz1A2IL9t.jpg"
+        },
+        "rating": {
+            "percentage": 70,
+            "watching": 5,
+            "votes": 2389,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt5719748",
+        "imdb_id": "tt5719748",
+        "title": "Cold Pursuit",
+        "year": "2019",
+        "synopsis": "The quiet family life of Nels Coxman, a snowplow driver, is upended after his son's murder. Nels begins a vengeful hunt for Viking, the drug lord he holds responsible for the killing, eliminating Viking's associates one by one. As Nels draws closer to Viking, his actions bring even more unexpected and violent consequences, as he proves that revenge is all in the execution.",
+        "runtime": "119",
+        "released": 1549584000,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.91 GB",
+                    "size": 2050846884,
+                    "peer": 4397,
+                    "seed": 4946,
+                    "url": "magnet:?xt=urn:btih:8F633ADE68281674EBF175A9FC100DCA33AB827A&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1 GB",
+                    "size": 1073741824,
+                    "peer": 5270,
+                    "seed": 5628,
+                    "url": "magnet:?xt=urn:btih:259388538FA3C1872D971486F3421D27A557B026&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=0phuNQQ_gHI",
+        "genres": [
+            "thriller",
+            "action",
+            "drama",
+            "crime"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/hXgmWPd1SuujRZ4QnKLzrj79PAw.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/vEf5TcMW0ZwzGz24ZJSRWYXYlpX.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/hXgmWPd1SuujRZ4QnKLzrj79PAw.jpg"
+        },
+        "rating": {
+            "percentage": 67,
+            "watching": 5,
+            "votes": 3344,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt5461944",
+        "imdb_id": "tt5461944",
+        "title": "Hotel Mumbai",
+        "year": "2019",
+        "synopsis": "Mumbai, India, November 26, 2008. While several terrorists spread hatred and death through the city, others attack the Taj Mahal Palace Hotel. Both hotel staff and guests risk their lives, making unthinkable sacrifices to protect themselves and keep everyone safe while help arrives.",
+        "runtime": "123",
+        "released": 1553817600,
+        "certification": "R",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:6563F9827717A68FFF464D337E145CE28545598A&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 4422,
+                    "peer": 1324,
+                    "size": 2115271393,
+                    "filesize": "1.97 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.02 GB",
+                    "size": 1095216660,
+                    "peer": 1627,
+                    "seed": 3885,
+                    "url": "magnet:?xt=urn:btih:F31F55088AFCDBBA0EDDA885A760FE7BCC3CBA73&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=F6szJsykTQw",
+        "genres": [
+            "thriller",
+            "drama"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/4UM3WBgWvAXi9CaBXJjwAMnEY05.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/2WgDlJnkc1klLr1WuCuUTzzmNne.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/4UM3WBgWvAXi9CaBXJjwAMnEY05.jpg"
+        },
+        "rating": {
+            "percentage": 79,
+            "watching": 5,
+            "votes": 1131,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0848228",
+        "imdb_id": "tt0848228",
+        "title": "The Avengers",
+        "year": "2012",
+        "synopsis": "When an unexpected enemy emerges and threatens global safety and security, Nick Fury, director of the international peacekeeping agency known as S.H.I.E.L.D., finds himself in need of a team to pull the world back from the brink of disaster. Spanning the globe, a daring recruitment effort begins!",
+        "runtime": "143",
+        "released": 1336089600,
+        "trailer": "http://youtube.com/watch?v=eOrNdBpGMv8",
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "2.20 GB",
+                    "size": 2362232013,
+                    "peer": 538,
+                    "seed": 1937,
+                    "url": "magnet:?xt=urn:btih:E9F759B6A26113F3745311DAD4BD332B4612EB60&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:0BBCA7584749D4E741747E32E6EB588AEA03E40F&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 2947,
+                    "peer": 650,
+                    "size": 1073028792,
+                    "filesize": "1023.32 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "genres": [
+            "action",
+            "adventure",
+            "science-fiction",
+            "superhero"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/cezWGskPY5x7GaglTTRN4Fugfb8.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/8GVwdiskXXIQxkVjfKZrNp4sJ58.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/cezWGskPY5x7GaglTTRN4Fugfb8.jpg"
+        },
+        "rating": {
+            "percentage": 83,
+            "watching": 5,
+            "votes": 49472,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6811018",
+        "imdb_id": "tt6811018",
+        "title": "The Kid Who Would Be King",
+        "year": "2019",
+        "synopsis": "Old-school magic meets the modern world when young Alex stumbles upon the mythical sword Excalibur. He soon unites his friends and enemies, and they become knights who join forces with the legendary wizard Merlin. Together, they must save mankind from the wicked enchantress Morgana and her army of supernatural warriors.",
+        "runtime": "120",
+        "released": 1548374400,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:0C463C6E2F48D4FAE7804D374A79C28741BB9E54&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 4055,
+                    "peer": 2476,
+                    "size": 2072321720,
+                    "filesize": "1.93 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:064D126C8FE1F27AD03F5076863BC7ED7A070883&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 5073,
+                    "peer": 3112,
+                    "size": 1073741824,
+                    "filesize": "1 GB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=TADKiHYj6RE",
+        "genres": [
+            "action",
+            "adventure",
+            "fantasy",
+            "family"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/kBuvLX6zynQP0sjyqbXV4jNaZ4E.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/jmbgxBd86MshzQQvv5laKvOKoMm.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/kBuvLX6zynQP0sjyqbXV4jNaZ4E.jpg"
+        },
+        "rating": {
+            "percentage": 69,
+            "watching": 4,
+            "votes": 1330,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt1477834",
+        "imdb_id": "tt1477834",
+        "title": "Aquaman",
+        "year": "2018",
+        "synopsis": "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne.",
+        "runtime": "144",
+        "released": 1545350400,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:B6E82665EF588BB6574DB1F9780A0279274F407D&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 21841,
+                    "peer": 10865,
+                    "size": 2480343613,
+                    "filesize": "2.31 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1.2 GB",
+                    "size": 1288490189,
+                    "peer": 6746,
+                    "seed": 13763,
+                    "url": "magnet:?xt=urn:btih:AD28CACBAEA04BAD181685740D251D76E2EBA37A&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=WDkg3h8PCVU",
+        "genres": [
+            "fantasy",
+            "superhero",
+            "adventure",
+            "action"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/ydUpl3QkVUCHCq1VWvo2rW4Sf7y.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/ydUpl3QkVUCHCq1VWvo2rW4Sf7y.jpg"
+        },
+        "rating": {
+            "percentage": 75,
+            "watching": 4,
+            "votes": 17900,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0241527",
+        "imdb_id": "tt0241527",
+        "title": "Harry Potter and the Philosopher's Stone",
+        "year": "2001",
+        "synopsis": "Harry Potter has lived under the stairs at his aunt and uncle's house his whole life. But on his 11th birthday, he learns he's a powerful wizard -- with a place waiting for him at the Hogwarts School of Witchcraft and Wizardry. As he learns to harness his newfound powers with the help of the school's kindly headmaster, Harry uncovers the truth about his parents' deaths -- and about the villain who's to blame.",
+        "runtime": "152",
+        "released": 1005868800,
+        "trailer": "http://youtube.com/watch?v=PbdM1db3JbY",
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:B47882A62EEDEC7767AA86B7A866F1DD846C5357&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 1888,
+                    "peer": 548,
+                    "size": 1256277934,
+                    "filesize": "1.17 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:C483A8C04C800EB55EF652CAB3439F0D55DB475C&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 1311,
+                    "peer": 256,
+                    "size": 576716800,
+                    "filesize": "550.00 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "genres": [
+            "adventure",
+            "fantasy",
+            "family"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/gHPtCmMeDqjaGqnMrWGDmD3nKd2.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/hziiv14OpD73u9gAak4XDDfBKa2.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/gHPtCmMeDqjaGqnMrWGDmD3nKd2.jpg"
+        },
+        "rating": {
+            "percentage": 80,
+            "watching": 4,
+            "votes": 29892,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2709692",
+        "imdb_id": "tt2709692",
+        "title": "The Grinch",
+        "year": "2018",
+        "synopsis": "The Grinch hatches a scheme to ruin Christmas when the residents of Whoville plan their annual holiday celebration.",
+        "runtime": "90",
+        "released": 1541721600,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.38 GB",
+                    "size": 1481763717,
+                    "peer": 3812,
+                    "seed": 7636,
+                    "url": "magnet:?xt=urn:btih:80A81B7C6940813686820147C9ED7A4113B45924&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:12379F87D5C5D90EC3C445A6B00593346CEB4B17&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 8185,
+                    "peer": 4036,
+                    "size": 767935119,
+                    "filesize": "732.36 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=vjnqABgxfO0",
+        "genres": [
+            "animation",
+            "family",
+            "comedy",
+            "fantasy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/gpkHvkCtZOeCQ2DelnJ2LB1WjZ5.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/fdpRBTIhmoaiBJNjikNB4fJxCON.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/gpkHvkCtZOeCQ2DelnJ2LB1WjZ5.jpg"
+        },
+        "rating": {
+            "percentage": 72,
+            "watching": 4,
+            "votes": 3102,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt1270797",
+        "imdb_id": "tt1270797",
+        "title": "Venom",
+        "year": "2018",
+        "synopsis": "Investigative journalist Eddie Brock attempts a comeback following a scandal, but accidentally becomes the host of Venom, a violent, super powerful alien symbiote. Soon, he must rely on his newfound powers to protect the world from a shadowy organization looking for a symbiote of their own.",
+        "runtime": "112",
+        "released": 1538697600,
+        "certification": "PG-13",
+        "torrents": {
+            "fr": {
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:d18a9718c3e7270b57e40249c96ebf48a1999085&tr=udp%3A%2F%2F9.rarbg.com%3A2800%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.me%3A2720%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2710%2Fannounce&tr=udp%3A%2F%2F9.rarbg.to%3A2720%2Fannounce&tr=udp%3A%2F%2Feddie4.nl%3A6969%2Fannounce&tr=udp%3A%2F%2Fexodus.desync.com%3A6969%2Fannounce&tr=udp%3A%2F%2Fexplodie.org%3A6969&tr=udp%3A%2F%2Fipv4.tracker.harry.lu%3A80%2Fannounce&tr=udp%3A%2F%2Fmgtracker.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fp4p.arenabg.ch%3A1337&tr=udp%3A%2F%2Fp4p.arenabg.com%3A1337&tr=udp%3A%2F%2Ftorrent.gresille.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.1337x.org%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.blackunicorn.xyz%3A6969&tr=udp%3A%2F%2Ftracker.btzoo.eu%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A6969&tr=udp%3A%2F%2Ftracker.coppersurfer.tk%3A80&tr=udp%3A%2F%2Ftracker.glotorrents.com%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.istole.it%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.openbittorrent.com%3A80&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.publicbt.com%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.publichd.eu%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.torrent.eu.org%3A451&tr=udp%3A%2F%2Ftracker.vanitycore.co%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.zond.org%3A80%2Fannounce",
+                    "seed": 140,
+                    "peer": 26,
+                    "size": null,
+                    "filesize": null,
+                    "provider": "CLI"
+                }
+            },
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:03BB57EA1F7E8DC9CC7DA349B549D7A7C5BC3359&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 27225,
+                    "peer": 11968,
+                    "size": 1836098519,
+                    "filesize": "1.71 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "908.6 MB",
+                    "size": 952736154,
+                    "peer": 10349,
+                    "seed": 18762,
+                    "url": "magnet:?xt=urn:btih:FDF369445A7E51534E101132F3E01363F3525109&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=u9Mv98Gr5pY",
+        "genres": [
+            "science-fiction",
+            "superhero",
+            "action"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/bURIWlkMbzT8RdpemzCmQECo2Uh.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/VuukZLgaCrho2Ar8Scl9HtV3yD.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/bURIWlkMbzT8RdpemzCmQECo2Uh.jpg"
+        },
+        "rating": {
+            "percentage": 72,
+            "watching": 4,
+            "votes": 18671,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt0145487",
+        "imdb_id": "tt0145487",
+        "title": "Spider-Man",
+        "year": "2002",
+        "synopsis": "After being bitten by a genetically altered spider, nerdy high school student Peter Parker is endowed with amazing powers.",
+        "runtime": "121",
+        "released": 1020384000,
+        "trailer": "http://youtube.com/watch?v=O7zvehDxttM",
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.84 GB",
+                    "size": 1975684956,
+                    "peer": 152,
+                    "seed": 301,
+                    "url": "magnet:?xt=urn:btih:B6ABEA6BAC7DEBB9BCF845983727FA6EDFCED29D&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:0A452C5D40E282D216962B5423B600D1A103F8BA&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 177,
+                    "peer": 89,
+                    "size": 733111910,
+                    "filesize": "699.15 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "genres": [
+            "action",
+            "fantasy",
+            "superhero"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/rZd0y1X1Gw4t5B3f01Qzj8DYY66.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/5yAEbTXiJZQpNx7eCyyOhnY9MYw.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/rZd0y1X1Gw4t5B3f01Qzj8DYY66.jpg"
+        },
+        "rating": {
+            "percentage": 74,
+            "watching": 4,
+            "votes": 16266,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt6428676",
+        "imdb_id": "tt6428676",
+        "title": "Wonder Park",
+        "year": "2019",
+        "synopsis": "The story of a magnificent amusement park where the imagination of a wildly creative girl named June comes alive.",
+        "runtime": "86",
+        "released": 1552608000,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.37 GB",
+                    "size": 1471026299,
+                    "peer": 761,
+                    "seed": 2257,
+                    "url": "magnet:?xt=urn:btih:01FE4F91D5A5F49A1D3690065C5C7728FD23CBFF&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "726.72 MB",
+                    "size": 762021151,
+                    "peer": 1051,
+                    "seed": 2508,
+                    "url": "magnet:?xt=urn:btih:980341806B49EFF881D72AD92C232217A583418F&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=vYm7mYd0SgE",
+        "genres": [
+            "animation",
+            "comedy",
+            "adventure",
+            "family",
+            "fantasy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/elUcnFlkQnx8ucyCTCWIi6HRa3w.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/nJyAdKPnW15IAvC6sLBTE0lp6Dv.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/elUcnFlkQnx8ucyCTCWIi6HRa3w.jpg"
+        },
+        "rating": {
+            "percentage": 74,
+            "watching": 4,
+            "votes": 739,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt5977276",
+        "imdb_id": "tt5977276",
+        "title": "The Aftermath",
+        "year": "2019",
+        "synopsis": "In the aftermath of World War II, a British colonel and his wife are assigned to live in Hamburg during the post-war reconstruction, but tensions arise with the German widower who lives with them.",
+        "runtime": "108",
+        "released": 1551398400,
+        "certification": null,
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:DF3DBD61C776303EA24D0C8E21E359397693871B&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 1085,
+                    "peer": 564,
+                    "size": 1879048192,
+                    "filesize": "1.75 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:6C813787A1E1D6A745AFA736F8023F4BB4B8875C&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 1592,
+                    "peer": 730,
+                    "size": 974441677,
+                    "filesize": "929.3 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=FPv3e2FZOgo",
+        "genres": [
+            "drama",
+            "romance",
+            "war"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/slGZ8miznmAZAaDHEz6BKo7f1N5.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/j2iZourlSz3vlUyfE2LHOveZzDi.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/slGZ8miznmAZAaDHEz6BKo7f1N5.jpg"
+        },
+        "rating": {
+            "percentage": 69,
+            "watching": 4,
+            "votes": 284,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt3498820",
+        "imdb_id": "tt3498820",
+        "title": "Captain America: Civil War",
+        "year": "2016",
+        "synopsis": "Following the events of Age of Ultron, the collective governments of the world pass an act designed to regulate all superhuman activity. This polarizes opinion amongst the Avengers, causing two factions to side with Iron Man or Captain America, which causes an epic battle between former allies.",
+        "runtime": "147",
+        "released": 1462492800,
+        "trailer": "http://youtube.com/watch?v=dKrVegVI0Us",
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "2.24 GB",
+                    "size": 2405181686,
+                    "peer": 7554,
+                    "seed": 17466,
+                    "url": "magnet:?xt=urn:btih:89925FB48CAE260801F35FB7175530BF6E5E055A&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:EB2D1EDF90C35F7BEFCAB92D064B608E8EC5F571&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 11235,
+                    "peer": 9193,
+                    "size": 1138166333,
+                    "filesize": "1.06 GB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "genres": [
+            "action",
+            "science-fiction",
+            "adventure",
+            "superhero"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/5N20rQURev5CNDcMjHVUZhpoCNC.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/m5O3SZvQ6EgD5XXXLPIP1wLppeW.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/5N20rQURev5CNDcMjHVUZhpoCNC.jpg"
+        },
+        "rating": {
+            "percentage": 80,
+            "watching": 4,
+            "votes": 44127,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2709768",
+        "imdb_id": "tt2709768",
+        "title": "The Secret Life of Pets",
+        "year": "2016",
+        "synopsis": "The quiet life of a terrier named Max is upended when his owner takes in Duke, a stray whom Max instantly dislikes.",
+        "runtime": "87",
+        "released": 1467936000,
+        "trailer": "http://youtube.com/watch?v=UZJVc_JTI_w",
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:660426E302992B361C13B82C6B424C4637A43475&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 7998,
+                    "peer": 4798,
+                    "size": 1406601789,
+                    "filesize": "1.31 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:147C115F3DE71B6B0C4FE44AFF7695B43D016DBB&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 6845,
+                    "peer": 4091,
+                    "size": 663559864,
+                    "filesize": "632.82 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "genres": [
+            "adventure",
+            "comedy",
+            "animation",
+            "family"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/WLQN5aiQG8wc9SeKwixW7pAR8K.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/lubzBMQLLmG88CLQ4F3TxZr2Q7N.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/WLQN5aiQG8wc9SeKwixW7pAR8K.jpg"
+        },
+        "rating": {
+            "percentage": 74,
+            "watching": 4,
+            "votes": 32053,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt2283362",
+        "imdb_id": "tt2283362",
+        "title": "Jumanji: Welcome to the Jungle",
+        "year": "2017",
+        "synopsis": "The tables are turned as four teenagers are sucked into Jumanji's world - pitted against rhinos, black mambas and an endless variety of jungle traps and puzzles. To survive, they'll play as characters from the game.",
+        "runtime": "119",
+        "released": 1513728000,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.9 GB",
+                    "size": 2040109466,
+                    "peer": 625,
+                    "seed": 1596,
+                    "url": "magnet:?xt=urn:btih:1E7E5B5A6E5FC4BDBC72BE7D73A5F507FD4403D5&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "1011.75 MB",
+                    "size": 1060896768,
+                    "peer": 1073,
+                    "seed": 2729,
+                    "url": "magnet:?xt=urn:btih:53D6D70CF0112DB618D98B345AEB2A3F3411EAE0&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=2QKg5SZ_35I",
+        "genres": [
+            "action",
+            "adventure",
+            "comedy",
+            "fantasy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/22hqf97LadMvkd4zDi3Bq25xSqD.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/rz3TAyd5kmiJmozp3GUbYeB5Kep.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/22hqf97LadMvkd4zDi3Bq25xSqD.jpg"
+        },
+        "rating": {
+            "percentage": 74,
+            "watching": 3,
+            "votes": 23365,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt3874544",
+        "imdb_id": "tt3874544",
+        "title": "The Boss Baby",
+        "year": "2017",
+        "synopsis": "A story about how a new baby's arrival impacts a family, told from the point of view of a delightfully unreliable narrator, a wildly imaginative 7 year old named Tim.",
+        "runtime": "97",
+        "released": 1490918400,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.48 GB",
+                    "size": 1589137900,
+                    "peer": 4920,
+                    "seed": 7255,
+                    "url": "magnet:?xt=urn:btih:3997AC6DB4C767B9CC3DE84D25E3E912CF24612E&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "url": "magnet:?xt=urn:btih:0BA66BFA81F29F96D58D4C896FC30DFF9F24F784&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 8071,
+                    "peer": 4865,
+                    "size": 745380250,
+                    "filesize": "710.85 MB",
+                    "provider": "YTS"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=Ud8j5GaqH3c",
+        "genres": [
+            "animation",
+            "comedy",
+            "family"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/nD2p4wBXBMg148ehbZ8eKjfGtTo.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/8keMlLuzB9XIUBnbdEq5DCqZdHQ.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/nD2p4wBXBMg148ehbZ8eKjfGtTo.jpg"
+        },
+        "rating": {
+            "percentage": 74,
+            "watching": 3,
+            "votes": 24900,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt3513498",
+        "imdb_id": "tt3513498",
+        "title": "The Lego Movie 2: The Second Part",
+        "year": "2019",
+        "synopsis": "It's been five years since everything was awesome and the citizens are facing a huge new threat: LEGO DUPLO\u00ae invaders from outer space, wrecking everything faster than they can rebuild.",
+        "runtime": "106",
+        "released": 1549584000,
+        "certification": "PG",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "provider": "YTS",
+                    "filesize": "1.68 GB",
+                    "size": 1803886264,
+                    "peer": 3228,
+                    "seed": 6263,
+                    "url": "magnet:?xt=urn:btih:7152C976B51B42EFCD751FBD4E1E003B4C38DA41&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "897.24 MB",
+                    "size": 940824330,
+                    "peer": 2735,
+                    "seed": 5670,
+                    "url": "magnet:?xt=urn:btih:643102562BF71FAB28C4D7C55ACACE72F8C79990&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=XvHSlHhh1gk",
+        "genres": [
+            "animation",
+            "family",
+            "action",
+            "adventure",
+            "comedy",
+            "science-fiction",
+            "fantasy"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/ymHghL9iS7X0QpSDqp7jhiEDVFh.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/8kPozGb4BDrcWBSsGPrkULG2tP9.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/ymHghL9iS7X0QpSDqp7jhiEDVFh.jpg"
+        },
+        "rating": {
+            "percentage": 72,
+            "watching": 3,
+            "votes": 2889,
+            "loved": 100,
+            "hated": 100
+        }
+    },
+    {
+        "_id": "tt1211837",
+        "imdb_id": "tt1211837",
+        "title": "Doctor Strange",
+        "year": "2016",
+        "synopsis": "After his career is destroyed, a brilliant but arrogant surgeon gets a new lease on life when a sorcerer takes him under her wing and trains him to defend the world against evil.",
+        "runtime": "115",
+        "released": 1478217600,
+        "certification": "PG-13",
+        "torrents": {
+            "en": {
+                "1080p": {
+                    "url": "magnet:?xt=urn:btih:7BA0C6BD9B4E52EA2AD137D02394DE7D83B98091&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337",
+                    "seed": 14081,
+                    "peer": 9839,
+                    "size": 1879048192,
+                    "filesize": "1.75 GB",
+                    "provider": "YTS"
+                },
+                "720p": {
+                    "provider": "YTS",
+                    "filesize": "844.93 MB",
+                    "size": 885973320,
+                    "peer": 8260,
+                    "seed": 9992,
+                    "url": "magnet:?xt=urn:btih:AFA238A8D953B6256D94FCF6D183917F5110E6F4&tr=udp://glotorrents.pw:6969/announce&tr=udp://tracker.opentrackr.org:1337/announce&tr=udp://torrent.gresille.org:80/announce&tr=udp://tracker.openbittorrent.com:80&tr=udp://tracker.coppersurfer.tk:6969&tr=udp://tracker.leechers-paradise.org:6969&tr=udp://p4p.arenabg.ch:1337&tr=udp://tracker.internetwarriors.net:1337"
+                }
+            }
+        },
+        "trailer": "http://youtube.com/watch?v=HSzx-zryEgM",
+        "genres": [
+            "action",
+            "adventure",
+            "science-fiction",
+            "fantasy",
+            "superhero"
+        ],
+        "images": {
+            "poster": "http://image.tmdb.org/t/p/w500/dNrpCiRWrCNZLnEk16GCgaTOYEz.jpg",
+            "fanart": "http://image.tmdb.org/t/p/w500/tFI8VLMgSTTU38i8TIsklfqS9Nl.jpg",
+            "banner": "http://image.tmdb.org/t/p/w500/dNrpCiRWrCNZLnEk16GCgaTOYEz.jpg"
+        },
+        "rating": {
+            "percentage": 78,
+            "watching": 3,
+            "votes": 50023,
+            "loved": 100,
+            "hated": 100
+        }
+    }
+]
