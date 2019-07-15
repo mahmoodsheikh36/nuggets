@@ -1,5 +1,7 @@
 const { app, BrowserWindow } = require('electron')
 
+console.log(process.argv)
+
 let win
 
 function createWindow () {

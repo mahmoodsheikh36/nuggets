@@ -5,7 +5,8 @@ const yts = require('./js/yts.js'),
       torrent = require('./js/torrent.js'),
       subtitles = require('./js/subtitles.js'),
       popcorn = require('./js/popcorn.js'),
-      movieLib = require('./js/movie.js')
+      movieLib = require('./js/movie.js'),
+      server = require('./js/server.js')
 
 const MOVIES_LOCATION = os.homedir() + '/movies/'
 
@@ -137,10 +138,10 @@ let setMovieVideo = (movie) => {
       getMovieVideo().currentTime -= 10
       break
     case 'f':
-      if (document.fullscreenElement === getMovieVideo())
-        document.exitFullscreen()
+      if (document.webkitFullscreenElement === getMovieVideo())
+        document.webkitExitFullscreen()
       else
-        getMovieVideo().requestFullscreen()
+        getMovieVideo().webkitRequestFullscreen()
       break
     case 'Escape':
       previewMovie(movieBeingPreviewd)
@@ -151,7 +152,7 @@ let setMovieVideo = (movie) => {
   removeTrailer()
   show($('#video_container'))
   getMovieVideo().focus()
-  getMovieVideo().requestFullscreen()
+  getMovieVideo().webkitRequestFullscreen()
 
 }
 
@@ -176,6 +177,11 @@ let delaySubtitles = (seconds) => {
   console.log(`delayed subtitles by ${seconds} seconds`)
 }
 
+let rewatchMovie = (movie) => {
+  torrent.remove(movie)
+  watchMovie(movie)
+}
+
 let watchMovie = (movie) => {
   removeMovieVideo()
   if (movie.torrent !== undefined) {
@@ -189,13 +195,13 @@ let watchMovie = (movie) => {
       let moviePath = movieTorrent.path + movieTorrent.name
       movie.path = moviePath
 
-      subtitles.fetchSubtitles(movie.imdb_code, moviePath + '/subtitles.vtt', 'english', () => {
+      subtitles.fetchSubtitles(movie.imdbId, moviePath + '/subtitles.vtt', 'english', () => {
         /* console.log('got subtitles yay!') */
         addSubtitles(movie)
         console.log('added subtitles to video')
       })
 
-      fs.writeFile(moviePath + '/details.json', JSON.stringify(movie, null, 2), (err, data) => {
+      fs.writeFile(moviePath + '/movie.json', JSON.stringify(movie, null, 2), (err, data) => {
         if (err) throw err
         console.log('saved movie details for \'' + movie.title + '\'')
       })
@@ -412,7 +418,7 @@ let getAllSavedMovieDetails = (dirents, direntsLength, movieList, cb) => {
 }
 
 let getSavedMovieDetails = (movieDirName, cb) => {
-  let detailsFile = MOVIES_LOCATION + movieDirName + '/details.json'
+  let detailsFile = MOVIES_LOCATION + movieDirName + '/movie.json'
   console.log(detailsFile)
   fs.readFile(detailsFile, (err, content) => {
     if (err) {

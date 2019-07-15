@@ -51,7 +51,7 @@ let fromPopcornMovie = (popcornMovie) => {
     let trailerCode = popcornMovie.trailer.substring(popcornMovie.trailer.length - 11)
     movie.trailer      = 'https://www.youtube.com/embed/' + trailerCode
   } else {
-    console.error(`${movie.title} doesn't have a trailer link`)
+    // console.error(`${movie.title} doesn't have a trailer link`)
   }
 
   return movie
