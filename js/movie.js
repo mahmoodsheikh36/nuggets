@@ -1,11 +1,5 @@
-
-class Movie {
-  constructor() {
-  }
-}
-
 let fromYtsMovie = (ytsMovie) => {
-  let movie = new Movie()
+  let movie = {}
 
   movie.imdbId     = ytsMovie.imdb_code
   movie.title      = ytsMovie.title
@@ -18,12 +12,13 @@ let fromYtsMovie = (ytsMovie) => {
   movie.desc       = ytsMovie.description_full
   movie.srcObj     = ytsMovie
 
-  let foundTorrent = false
   for (let i = 0; i < ytsMovie.torrents.length; ++i) {
     let torrent = ytsMovie.torrents[i]
     if (torrent.quality === '1080p') {
       movie.torrent1080p = torrent
       foundTorrent = true
+    } else if (torrent.quality === '720p') {
+      movie.torrent720p = torrent
     }
   }
   if (!foundTorrent)
@@ -33,7 +28,7 @@ let fromYtsMovie = (ytsMovie) => {
 }
 
 let fromPopcornMovie = (popcornMovie) => {
-  let movie = new Movie()
+  let movie = {}
 
   movie.imdbId       = popcornMovie.imdb_id
   movie.title        = popcornMovie.title
@@ -44,6 +39,7 @@ let fromPopcornMovie = (popcornMovie) => {
   movie.cert         = popcornMovie.certification
   movie.desc         = popcornMovie.synopsis
   movie.torrent1080p = popcornMovie.torrents.en['1080p']
+  movie.torrent720p  = popcornMovie.torrents.en['720p']
   movie.srcObj       = popcornMovie
 
   // last 11 characters of the url are the code for the yt video

@@ -14,7 +14,6 @@ let fetchSubtitles = (imdbId, path, lang, cb) => {
       console.error(`error fetching subtitles, status code: ${statusCode}`)
     } else {
       let subtitlesData = JSON.parse(content)
-      console.log(subtitlesData)
       let desiredSubtitles
       for (let i = 0; i < subtitlesData.length; ++i) {
         if (subtitlesData[i].LanguageName.toLowerCase() === lang.toLowerCase()) {

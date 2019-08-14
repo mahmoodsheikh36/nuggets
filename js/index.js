@@ -43,7 +43,7 @@ let fetchMovies = (pages=1, ytsArgs, cb) => {
     //   cb()
   } else {
     yts.fetchMovies((content, statusCode) => {
-      if (statusCode == 200) {
+      if (statusCode === 200) {
         let ytsMovies = JSON.parse(content).data.movies
         if (ytsMovies) {
           let movies = movieLib.fromYtsMovies(ytsMovies)
@@ -79,6 +79,17 @@ let refetchMovies = (pages=1, ytsArgs) => {
 }
 
 let addMovie = (movie) => {
+  let movieExists = false;
+  movies.forEach((movieInList) => {
+    if (movie.imdbId === movieInList.imdbId) {
+      movieExists = true
+      return
+    }
+  })
+  if (movieExists) {
+    return
+  }
+
   movies.push(movie)
   movie.index = movies.length - 1
   // main div
@@ -149,8 +160,9 @@ let setMovieVideo = (movie) => {
     }
   }
   hide($('#movies'), $('#preview_container'))
+  hide($('#top_bar'))
   removeTrailer()
-  show($('#video_container'))
+  showFlexDisplay($('#video_container'))
   getMovieVideo().focus()
   getMovieVideo().webkitRequestFullscreen()
 
@@ -165,6 +177,14 @@ let addSubtitles = (movie) => {
 
   getMovieVideo().appendChild(subtitles)
   getMovieVideo().textTracks[0].mode = 'showing'
+}
+
+let refetchSubtitles = (movie) => {
+  subtitles.fetchSubtitles(movie.imdbId, movie.path + '/subtitles.vtt', 'english', () => {
+    /* console.log('got subtitles yay!') */
+    addSubtitles(movie)
+    console.log('added subtitles to video')
+  })
 }
 
 let delaySubtitles = (seconds) => {
@@ -192,7 +212,7 @@ let watchMovie = (movie) => {
   } else {
     torrent.stream(movie, (movieTorrent) => {
       let torrentId = movieTorrent.magnetURI
-      let moviePath = movieTorrent.path + movieTorrent.name
+      let moviePath = decodeURIComponent(movieTorrent.path + movieTorrent.name)
       movie.path = moviePath
 
       subtitles.fetchSubtitles(movie.imdbId, moviePath + '/subtitles.vtt', 'english', () => {
@@ -226,7 +246,7 @@ let previewMovie = (movie, updateScrollAmount=false) => {
     scrollAmount = document.documentElement.scrollTop
   removeTrailer()
   removeMovieVideo()
-  hide($('#movies'), $('#video_container'))
+  hide($('#movies'), $('#video_container'), $('#top_bar'))
   $('#preview_title').innerHTML = movie.title
   $('#preview_year').innerHTML  = movie.year
   $('#preview_desc').innerHTML  = movie.desc
@@ -251,6 +271,7 @@ let viewMovieList = () => {
   removeTrailer()
   removeMovieVideo()
   hide($('#video_container'), $('#preview_container'))
+  showFlexDisplay($('#top_bar'))
   showFlexDisplay($('#movies'))
   document.documentElement.scrollTop = scrollAmount
 }
@@ -270,7 +291,8 @@ let watchTrailer = (movie) => {
   ytIframe.className = 'trailer'
   ytIframe.id        = 'trailer'
 
-  hide($('#video_container'), $('#preview_container'), $('#movies'))
+  hide($('#video_container'), $('#preview_container'), $('#movies'),
+       $('#top_bar'))
 
   // let ytUrl = movie.trailer
   // ytUrl += '?autoplay=1'
@@ -314,15 +336,17 @@ window.onload = () => {
   // getSavedMovies((savedMovies) => {
   //   addMovies(savedMovies)
   // })
+
   fetchPopcornMovies(20, {page: 1, sort: 'trending'}, (pageFetched) => {
     console.log(`page ${pageFetched} fetched`)
   })
+  // showSavedMovies()
+
   // fetchMovies(1, {page: 1, limit: 50, sort_by: 'peers', genre: 'romance'})
 }
 
 /* movie data logging */
-let previousMovie
-let increaseWatchTime = (movie, dataFile, cb) => {
+let increaseWatchTime = (movie, dataFile, seconds, cb) => {
   fs.readFile(dataFile, (err, content) => {
     if (err) {
       throw err
@@ -333,9 +357,7 @@ let increaseWatchTime = (movie, dataFile, cb) => {
     movies.forEach((savedMovie) => {
       if (savedMovie.imdbId === movie.imdbId) {
         foundMovie = true
-        savedMovie.secWatched++
-        if (previousMovie === undefined || movie.imdbId !== previousMovie.imdbId)
-          savedMovie.timesPlayed++
+        savedMovie.secWatched += seconds
       }
     })
 
@@ -393,7 +415,7 @@ let getSavedMovies = (cb) => {
       cb([])
     }
 
-    if (dirents.length == 0)
+    if (dirents.length === 0)
       cb([])
     console.log(dirents.length + ' saved movies found')
 
@@ -419,7 +441,6 @@ let getAllSavedMovieDetails = (dirents, direntsLength, movieList, cb) => {
 
 let getSavedMovieDetails = (movieDirName, cb) => {
   let detailsFile = MOVIES_LOCATION + movieDirName + '/movie.json'
-  console.log(detailsFile)
   fs.readFile(detailsFile, (err, content) => {
     if (err) {
       console.error(err)
@@ -484,32 +505,39 @@ let refetchPopcornMovies = (pages, options, cb) => {
   })
 }
 
-let collectData = () => {
-  let homeDir = os.homedir()
-  let dataFile = homeDir + '/mydata/movie_data.json'
-
-  if (!fs.existsSync(dataFile)) {
-    console.log('data directory doesnt exist, not saving data')
-    return
-  }
-
+let prevCollectDataDate;
+let collectData = (dataFile) => {
   if (typeof movieBeingWatched === 'object') {
     let video = getMovieVideo()
     if (video !== null) {
       let is_movie_playing
       is_movie_playing = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2
       if (is_movie_playing) {
-        increaseWatchTime(movieBeingWatched, dataFile, () => {
-          setTimeout(collectData, 1000)
+        let seconds = 1
+        let now = new Date()
+        if (prevCollectDataDate) {
+          seconds = (now - prevCollectDataDate) / 1000
+        }
+        increaseWatchTime(movieBeingWatched, dataFile, seconds, () => {
+          setTimeout(function() {
+            collectData(dataFile)
+          }, 1000)
         })
+        prevCollectDataDate = now
         return
       }
     }
   }
-  setTimeout(collectData, 1000)
+  setTimeout(collectData, 1000, dataFile)
 }
 
-collectData()
+let DATA_FILE = os.homedir() + '/mydata/movie_data.json'
+
+if (fs.existsSync(DATA_FILE)) {
+  collectData(DATA_FILE)
+} else {
+  console.log('data file doesnt exist, not saving data')
+}
 
 let setHoveredMovie = (movie) => {
   if (hoveredMovie !== undefined) {
@@ -519,14 +547,18 @@ let setHoveredMovie = (movie) => {
   hoveredMovie = movie
   if (document.documentElement.offsetHeight + document.documentElement.scrollTop < movie.domElement.offsetTop + movie.domElement.offsetHeight)
     document.documentElement.scrollTop = (movie.domElement.offsetTop + movie.domElement.offsetHeight) - document.documentElement.offsetHeight
-  if (movie.domElement.offsetTop < document.documentElement.scrollTop)
-    document.documentElement.scrollTop = movie.domElement.offsetTop
+  if (movie.domElement.offsetTop < document.documentElement.scrollTop) {
+    // 33 is the value of padding-top on the movies_container
+    let moviesContainerStyle = window.getComputedStyle($('#movies'))
+    let moviesContainerTopPadding = moviesContainerStyle.getPropertyValue('padding-top')
+    document.documentElement.scrollTop = movie.domElement.offsetTop - parseInt(moviesContainerTopPadding)
+  }
   movie.domElement.style.borderColor = 'red'
   movie.domElement.style.backgroundColor = '#2d7758'
 }
 
 /* vim keys yay! */
-document.onkeydown = (event) => {
+let handleKey = (key) => {
   if (isVisible($('#movies'))) {
     switch (event.key) {
     case 'j': // j
@@ -534,13 +566,22 @@ document.onkeydown = (event) => {
         setHoveredMovie(movies[0])
         break
       }
+      let firstMovieInRowBelow
+      let found = false
       for (let i = hoveredMovie.index; i < movies.length; ++i) {
         if (movies[i].domElement.offsetTop > hoveredMovie.domElement.offsetTop) {
+          if (firstMovieInRowBelow === undefined) {
+            firstMovieInRowBelow = movies[i]
+          }
           if (movies[i].domElement.offsetLeft === hoveredMovie.domElement.offsetLeft) {
             setHoveredMovie(movies[i])
+            found = true
             break
           }
         }
+      }
+      if (!found && firstMovieInRowBelow !== undefined) {
+        setHoveredMovie(firstMovieInRowBelow)
       }
       break
     case 'k': // k
@@ -548,13 +589,22 @@ document.onkeydown = (event) => {
         setHoveredMovie(movies[0])
         break
       }
+      let lastMovieInRowAbove
+      let foundMovie = false
       for (let i = hoveredMovie.index; i >= 0; --i) {
         if (movies[i].domElement.offsetTop < hoveredMovie.domElement.offsetTop) {
+          if (lastMovieInRowAbove === undefined) {
+            lastMovieInRowAbove = movies[i]
+          }
           if (movies[i].domElement.offsetLeft === hoveredMovie.domElement.offsetLeft) {
             setHoveredMovie(movies[i])
+            foundMovie = true
             break
           }
         }
+      }
+      if (!foundMovie && lastMovieInRowAbove !== undefined) {
+        setHoveredMovie(lastMovieInRowAbove)
       }
       break
     case 'l': // l
@@ -577,6 +627,7 @@ document.onkeydown = (event) => {
       break
     case ' ':
       event.preventDefault()
+    case 'v':
     case 'Enter': // enter
       if (hoveredMovie === undefined) {
         setHoveredMovie(movies[0])
@@ -604,7 +655,6 @@ document.onkeydown = (event) => {
       if (!foundLastInLineMovie)
         setHoveredMovie(movies[movies.length - 1])
       break
-    case '0':
     case '^':
       let foundFirstInLineMovie = false
       for (let i = hoveredMovie.index; i >= 0; --i) {
@@ -618,6 +668,7 @@ document.onkeydown = (event) => {
         setHoveredMovie(movies[0])
       break
     case 'Escape':
+      repeatStr = '0'
       break
     }
   }
@@ -633,6 +684,21 @@ document.onkeydown = (event) => {
       watchTrailer(movieBeingPreviewd)
       break
     }
+  }
+}
+
+let repeatStr = '0'
+document.onkeydown = (event) => {
+  if (!isNaN(event.key) && event.key !== ' ') {
+    repeatStr += event.key
+  } else {
+    let count = parseInt(repeatStr)
+    if (count === 0)
+      count = 1
+    for (let i = 0; i < count; ++i) {
+      handleKey(event.key)
+    }
+    repeatStr = '0';
   }
 }
 

@@ -16,9 +16,13 @@ torrentClient.on('error', function (err) {
  * cb          - callback function to call with the torrent id when its ready to be used
  */
 let stream = (movie, cb) => {
-  let torrentUrl = movie.torrent1080p.url
-  if (torrentUrl === undefined)
-    throw new Error('no torrent with 720p or 1080p quality')
+  let torrentUrl
+  if (movie.torrent1080p === undefined)
+    torrentUrl = movie.torrent720p.url
+  else torrentUrl = movie.torrent1080p.url
+  
+  // if (torrentUrl === undefined)
+  //   throw new Error('no torrent with 720p or 1080p quality')
 
   let movieDir = os.homedir() + '/movies/'
   torrentClient.add(torrentUrl, { path: movieDir }, (torrent) => {

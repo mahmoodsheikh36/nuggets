@@ -3,10 +3,10 @@
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
     padding: 0px;
     margin: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 body {
@@ -18,8 +18,8 @@ body {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    padding-top: 35px;
 }
-
 
 div.movie:hover {
     cursor: pointer;
@@ -28,7 +28,7 @@ div.movie:hover {
 
 div.movie img {
     height: auto;
-    width: 125px;
+    width: 111px;
 }
 
 div.title {
@@ -45,7 +45,8 @@ div.title {
 div.movie {
     border: 1px solid black;
     margin-bottom: 0.3em;
-    width: 127px;
+    /* width: 127px; */
+    width: 113px;
 }
 
 .preview_container {
@@ -66,10 +67,9 @@ div.movie {
 */
 
 .preview_image_container {
-    margin: 10px;
-    flex: 0 1 32%;
     align-self: center;
-    height: 90%;
+    flex: 0 1 32%;
+    margin: 10px;
 }
 
 .preview_image_container img {
@@ -81,7 +81,6 @@ div.movie {
 .preview_info_container {
     margin: 10px;
     flex: 0 1 50%;
-    align-self: center;
     height: 90%;
     display: flex;
     flex-flow: column nowrap;
@@ -183,4 +182,36 @@ div.movie {
 
 ::-webkit-scrollbar-thumb:hover {
     background: #1d8748;
+}
+
+.top_bar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    background-color: #1f4f3f;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.top_bar_menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    /* position: absolute; */
+    cursor: default;
+    display: none;
+}
+
+.top_bar_menu {
+    float: left;
+    cursor: pointer;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    z-index: 10;
+    background-color: #1f1f1f;
+    color: #4f8f3f;
 }
