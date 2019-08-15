@@ -507,14 +507,14 @@ let refetchPopcornMovies = (pages, options, cb) => {
 
 let prevCollectDataDate;
 let collectData = (dataFile) => {
+  let now = new Date()
   if (typeof movieBeingWatched === 'object') {
     let video = getMovieVideo()
     if (video !== null) {
       let is_movie_playing
       is_movie_playing = video.currentTime > 0 && !video.paused && !video.ended && video.readyState > 2
       if (is_movie_playing) {
-        let seconds = 1
-        let now = new Date()
+        let seconds = 0
         if (prevCollectDataDate) {
           seconds = (now - prevCollectDataDate) / 1000
         }
@@ -528,6 +528,7 @@ let collectData = (dataFile) => {
       }
     }
   }
+  prevCollectDataDate = now
   setTimeout(collectData, 1000, dataFile)
 }
 
