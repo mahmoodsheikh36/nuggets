@@ -215,3 +215,10 @@ div.movie {
     background-color: #1f1f1f;
     color: #4f8f3f;
 }
+
+div.playback {
+    position: fixed;
+    height: 20px;
+    bottom: 0;
+    background-color: red;
+}
