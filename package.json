@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^5.0.6"
+    "electron": "^9.4.0"
   },
   "dependencies": {
     "adm-zip": "^0.4.13",
